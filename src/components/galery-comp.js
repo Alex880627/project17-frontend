@@ -1,0 +1,164 @@
+import React, { Component } from "react";
+import pic5 from "../pic/pic5.jpg";
+import pic6 from "../pic/pic6.jpg";
+import pic7 from "../pic/pic7.jpg";
+import pic8 from "../pic/pic8.jpg";
+import pic9 from "../pic/gif.gif";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pictures: [pic5, pic6, pic7, pic8, pic9],
+      currentPic: 0,
+      initialPicPosition: 0,
+      picPosition: 0,
+      slideShowDirectionVar: 1
+    };
+    this.changePicByClick = this.changePicByClick.bind(this);
+    this.autoChangePic = this.autoChangePic.bind(this);
+    this.changePicByArrows = this.changePicByArrows.bind(this);
+    this.clearIntervalAndSetNew = this.clearIntervalAndSetNew.bind(this);
+    this.onMouseOut = this.onMouseOut.bind(this);
+    this.onMouseOver = this.onMouseOver.bind(this);
+  }
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.autoChangePic();
+    }, 5000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  updateStateWithDirection(slideShowDirectionVar, currentPic) {
+    const { pictures } = this.state;
+    if (currentPic > -1 && currentPic < pictures.length) {
+      this.setState(prevState => ({
+        currentPic: Number(prevState.currentPic) + slideShowDirectionVar,
+        picPosition:
+          this.state.initialPicPosition -
+          (Number(currentPic) + slideShowDirectionVar) * 100
+      }));
+    }
+  }
+  autoChangePic() {
+    const { currentPic, pictures, slideShowDirectionVar } = this.state;
+    if (currentPic < pictures.length - 1 && slideShowDirectionVar !== -1) {
+      this.updateStateWithDirection(slideShowDirectionVar, currentPic);
+      if (currentPic === pictures.length - 2) {
+        this.setState({
+          slideShowDirectionVar: -1
+        });
+      }
+    } else {
+      this.updateStateWithDirection(slideShowDirectionVar, currentPic);
+      if (currentPic === 1) {
+        this.setState({
+          slideShowDirectionVar: 1
+        });
+      }
+    }
+  }
+  clearIntervalAndSetNew() {
+    clearInterval(this.interval);
+    this.interval = setInterval(() => {
+      this.autoChangePic();
+    }, 5000);
+  }
+  changePicByClick(event) {
+    const { pictures } = this.state;
+    this.clearIntervalAndSetNew();
+    this.setState({
+      currentPic: event.target.id,
+      picPosition: this.state.initialPicPosition - event.target.id * 100
+    });
+    if (Number(event.target.id) === 0 || Number(event.target.id) === 1) {
+      this.setState({
+        slideShowDirectionVar: 1
+      });
+    } else if (
+      Number(event.target.id) === pictures.length - 1 ||
+      Number(event.target.id) === pictures.length - 2
+    ) {
+      this.setState({
+        slideShowDirectionVar: -1
+      });
+    }
+  }
+  onMouseOut = () => {
+    this.clearIntervalAndSetNew();
+  }
+  onMouseOver = () => {
+    clearInterval(this.interval);
+  }
+  changePicByArrows(event) {
+    const direction = event.target.className;
+    const { currentPic, pictures } = this.state;
+    this.clearIntervalAndSetNew();
+    if (Number(currentPic) < pictures.length - 1 && Number(currentPic) > 0) {
+      if (direction.includes("left")) {
+        this.updateStateWithDirection(-1, currentPic);
+        this.setState({
+          slideShowDirectionVar: 1
+        });
+      } else {
+        this.updateStateWithDirection(1, currentPic);
+        this.setState({
+          slideShowDirectionVar: -1
+        });
+      }
+    } else if (Number(currentPic) === 0) {
+      this.setState({
+        slideShowDirectionVar: 1
+      });
+      direction.includes("right") &&
+        this.updateStateWithDirection(1, currentPic);
+    } else if (Number(currentPic) === pictures.length - 1) {
+      this.setState({
+        slideShowDirectionVar: -1
+      });
+      direction.includes("left") &&
+        this.updateStateWithDirection(-1, currentPic);
+    }
+  }
+  render() {
+    const { currentPic, pictures, picPosition } = this.state;
+    return (
+      <div className="pic-galery-wrapper">
+        <div className="pic-galery" onMouseOut={this.onMouseOut} onMouseOver={this.onMouseOver}>
+         {/*  <div onClick={this.changePicByArrows} className="arrow left">
+            <div />
+          </div>
+          <div onClick={this.changePicByArrows} className="arrow right">
+            <div />
+          </div> */}
+          <div className="controll-buttons-wrapper">
+            {pictures.map((picture, index) => {
+              return (
+                <div
+                  id={index}
+                  onClick={this.changePicByClick}
+                  className={
+                    index === Number(currentPic)
+                      ? "controll-button active-button"
+                      : "controll-button"
+                  }
+                />
+              );
+            })}
+          </div>
+          <div
+            className="pictures-wrapper"
+            style={{ left: `${picPosition}%`, transition: "left 0.6s ease-in" }}
+          >
+            {pictures.map((picture, index) => {
+              return <img src={picture} id={index} alt="gyógytorna" />;
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;

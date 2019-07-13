@@ -1,0 +1,121 @@
+.main-navbar {
+  font-size: 16px;
+  width: 100%;
+  position: sticky;
+  padding: 50px;
+  padding-bottom: 38px;
+  overflow: visible;
+  height: 50px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 148, 138, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-navbar > div {
+  flex-grow: 1;
+  color: rgba(255, 255, 255, 0.7);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-navbar > div > a {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 20px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-navbar > div > a::after {
+  content: '';
+  margin-top: 5px;
+  display: block;
+  width: 0;
+  height: 1px;
+  background: rgb(255, 255, 255);
+  transition: width .3s;
+}
+
+.main-navbar > div > a:hover {
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.main-navbar > div > a:hover::after{
+  width: 100%;
+}
+
+
+.up-button {
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 80%;
+  left: 90%;
+}
+
+.up-button > a {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+}
+
+.up-button > a > img{
+  transition: opacity 0.3s;
+  z-index: 1;
+  width: 80px;
+  height: 75px;
+}
+
+.visible {
+  opacity: 0.7;
+  animation: bounceInRight 1s;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+  cursor: none;
+}
+
+.up-button > a > img:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 0.7;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

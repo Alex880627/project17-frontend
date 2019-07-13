@@ -1,0 +1,100 @@
+{
+  "navbar": {
+    "treatments": "Treatments",
+    "group sessions": "Group sessions",
+    "colleagues": "Collagues",
+    "prices": "Prices",
+    "contacts": "Contacts"
+  },
+  "collagues": {
+    "collagues": "Collagues",
+    "details": "Details",
+    "therapists": [
+      {
+        "name": "Sugár Szilvia",
+        "nick name": "Szilvi",
+        "occupation": "Physiotherapist",
+        "phone number": "06202441602",
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "color": "#659df7"
+      },
+      {
+        "name": "Csikós Panka",
+        "nick name": "Panka",
+        "occupation": "Physiotherapist",
+        "phone number": "06202441602",
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "color": "#f982ff"
+      },
+      {
+        "name": "Erasimus Zsuzsa",
+        "nick name": "Zsuzsi",
+        "occupation": "Massage Therapist",
+        "phone number": "06202441602",
+        "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "color": "#e67c6c"
+      }
+    ]
+  },
+  "contacts": {
+    "contacts title": "Where you can find us?",
+    "contacts info": {
+      "name": "Studio 17",
+      "address": "Falk Miksa street 17",
+      "city": "Budapest 1055",
+      "ringbell": "Ring bell",
+      "ringbell number": "17",
+      "email": "studio17gyogytorna@gmail.com"
+    }
+  },
+  "group sessions": {
+    "group sessions title": "Group therapy",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday"
+    }
+  },
+  "prices": {
+    "prices title": "Prices",
+    "occasion": "occasion",
+    "treatments": [
+      {
+        "name": "Assassement",
+        "price": "10 000 HUF",
+        "description": "First time candy canes cake candy canes sesame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55 minutes"
+      },
+      {
+        "name": "Physiotherapy",
+        "price": "8000/4000 HUF",
+        "description": "Pie powder candy canes cake candy canes sesame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55/30 minutes"
+      },
+      {
+        "name": "Pherapeutic massage",
+        "price": "8000/4000 HUF",
+        "description": "blablabla candy canes cake candy canes sesame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55/30 minutes"
+      },
+      {
+        "name": "Group therapy",
+        "description": "Gruppe powder candy canes cake candy canes sesame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "price": "2500 HUF",
+        "duration": "55 minutes"
+      }
+    ]
+  },
+  "footer": {
+    "copyright":"All rights reserved!",
+    "email": {
+      "email header": "Write e-mail for us!",
+      "email input": "Enter your e-mail address",
+      "name input": "Enter your full name",
+      "message": "Message...",
+      "send": "Send"
+    }
+  }
+}

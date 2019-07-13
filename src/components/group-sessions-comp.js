@@ -1,0 +1,95 @@
+import React from "react";
+import hu from "../assets/languages/lang-hu.json";
+import en from "../assets/languages/lang-en.json";
+import mockdata from "../assets/languages/mock-server-data.json";
+import timeTableIconWhite from "../pic/groupsessions/timeTableIconWhite.png";
+
+const GroupSessionsContainer = props => {
+  let groupSessions = "HU";
+  props.language === "HU"
+    ? (groupSessions = hu["group sessions"])
+    : (groupSessions = en["group sessions"]);
+
+  const getColorForTherapist = inputName => {
+    let result;
+    hu.collagues.therapists.forEach(element => {
+      if (element["nick name"] === inputName) {
+        result = element.color;
+      }
+    });
+    return result;
+  };
+  const makeMultiArrayFromDataByHours = objArray => {
+    objArray.sort((a, b) => parseFloat(a.hour) - parseFloat(b.hour));
+    let resultArr = [];
+    let objOfHours = {};
+    objArray.forEach(element =>
+      objOfHours[element.hour] === undefined
+        ? (objOfHours[element.hour] = "0")
+        : null
+    );
+    for (let a = 0; a < Object.keys(objOfHours).length; a++) {
+      let newArr = [];
+      for (let i = 0; i < objArray.length; i++) {
+        if (Object.keys(objOfHours)[a] === objArray[i].hour) {
+          newArr.push(objArray[i]);
+        }
+      }
+      resultArr.push(newArr);
+    }
+    return resultArr;
+  };
+  return (
+    <>
+      <div className="group-sessions-wrapper" id="group-sessions">
+        <div className="blur-wrapper" />
+        <div className="group-sessions-heading">
+          <h3>{groupSessions["group sessions title"]}</h3>
+          <img src={timeTableIconWhite} />
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <th />
+              {Object.entries(groupSessions.days).map(element => {
+                return <th>{element[1]}</th>;
+              })}
+            </tr>
+            {makeMultiArrayFromDataByHours(mockdata["sessions dates"]).map(
+              element => {
+                console.log();
+                return (
+                  <tr>
+                    <td>{element[0].hour}</td>
+                    {Object.keys(groupSessions.days).map(day => {
+                      const filteredTableData = element.filter(data => {
+                        return data.day === day;
+                      });
+                      return filteredTableData.length !== 0 ? (
+                        <td
+                          style={{
+                            backgroundColor: getColorForTherapist(
+                              filteredTableData[0].therapist
+                            )
+                          }}
+                        >
+                          {" "}
+                          <h3>{filteredTableData[0].therapist}</h3>
+                          <p>{filteredTableData[0].signed}</p>
+                        </td>
+                      ) : (
+                        <td />
+                      );
+                    })}
+                  </tr>
+                );
+              }
+            )}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+};
+
+export default GroupSessionsContainer;

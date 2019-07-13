@@ -1,0 +1,58 @@
+{
+  "sessions dates": [
+    {
+      "day": "monday",
+      "hour": "18:00",
+      "therapist": "Szilvi",
+      "signed": "4/6"
+    },
+    {
+      "day": "tuesday",
+      "hour": "7:30",
+      "therapist": "Panka"
+      ,
+      "signed": "2/6"
+    },
+    {
+      "day": "tuesday",
+      "hour": "13:00",
+      "therapist": "Panka"
+      ,
+      "signed": "5/6"
+    },
+    {
+      "day": "tuesday",
+      "hour": "17:00",
+      "therapist": "Panka"
+      ,
+      "signed": "0/6"
+    },
+    {
+      "day": "wednesday",
+      "hour": "18:00",
+      "therapist": "Szilvi",
+      
+      "signed": "1/6"
+    },
+    {
+      "day": "friday",
+      "hour": "18:00",
+      "therapist": "Szilvi"
+      ,
+      "signed": "3/6"
+    },
+    {
+      "day": "thursday",
+      "hour": "7:30",
+      "therapist": "Panka"
+      ,
+      "signed": "6/6"
+    },
+    {
+      "day": "thursday",
+      "hour": "17:00",
+      "therapist": "Panka",
+      "signed": "4/6"
+    }
+  ]
+}

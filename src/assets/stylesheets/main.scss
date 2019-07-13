@@ -1,0 +1,16 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@import './_therapist-list-style.scss';
+@import './_nav-bar.scss';
+@import './_language-picker-button.scss';
+@import './_galery.scss';
+@import './_close-button.scss';
+@import './contacts.scss';
+@import './landing-page.scss';
+@import './group-sessions.scss';
+@import './prices.scss';
+@import './footer.scss';

@@ -1,0 +1,101 @@
+{
+  "navbar": {
+    "treatments": "Kezeléseink",
+    "group sessions": "Csoportos órák",
+    "colleagues": "Munkatársaink",
+    "prices": "Áraink",
+    "contacts": "Kapcsolat"
+  },
+  "collagues": {
+    "collagues": "Munkatársaink",
+    "details": "Bővebben",
+    "therapists": [
+      {
+        "name": "Sugár Szilvia",
+        "nick name": "Szilvi",
+        "occupation": "Diplomás Gyógytornász",
+        "phone number": "06202441602",
+        "details": "Sugár Szilvia is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "color": "#659df7"
+      },
+      {
+        "name": "Csikós Panka",
+        "nick name": "Panka",
+        "occupation": "Diplomás Gyógytornász",
+        "phone number": "06202441602",
+        "details": "Csikós Panka is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "color": "#f982ff"
+      },
+      {
+        "name": "Erasimus Zsuzsa",
+        "nick name": "Zsuzsi",
+        "occupation": "Gyógymasszőr",
+        "phone number": "06202441602",
+        "details": "Erasimus Zsuzsa is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "color": "#e67c6c"
+      }
+    ]
+  },
+
+  "contacts": {
+    "contacts title": "Hol találsz minket?",
+    "contacts info": {
+      "name": "Stúdió 17",
+      "address": "Falk Miksa utca 17",
+      "city": "Budapest 1055",
+      "ringbell": "Kapucsengő",
+      "ringbell number": "17",
+      "email": "studio17gyogytorna@gmail.com"
+    }
+  },
+  "group sessions": {
+    "group sessions title": "Csoportos órák",
+    "days": {
+      "monday": "Hétfő",
+      "tuesday": "Kedd",
+      "wednesday": "Szerda",
+      "thursday": "Csütörtök",
+      "friday": "Péntek"
+    }
+  },
+  "prices": {
+    "prices title": "Áraink",
+    "occasion": "alkalom",
+    "treatments": [
+      {
+        "name": "Állapotfelmérés",
+        "price": "10 000 Ft",
+        "description": "Először jösz, ame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55 perc"
+      },
+      {
+        "name": "Egyéni gyógytorna",
+        "price": "8000/4000 Ft",
+        "description": "Egyénileg jösz, ame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55/30 perc"
+      },
+      {
+        "name": "Gyógymasszázs",
+        "price": "8000/4000 Ft",
+        "description": "Félóra gyógytorna, ame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55/30 perc"
+      },
+      {
+        "name": "Csoportos gerictorna",
+        "price": "2500 Ft",
+        "description": "Csoportos gyógytorna, ame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
+        "duration": "55 perc"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Minden jog fenntratva!",
+    "email": {
+      "email header": "Írj nekünk e-mailt!",
+      "email input": "Adja meg e-mail címét",
+      "name input": "Adja meg teljes nevét",
+      "message": "Üzenete...",
+      "send": "Küldés"
+    }
+  }
+}

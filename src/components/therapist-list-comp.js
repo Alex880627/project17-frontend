@@ -1,0 +1,86 @@
+import React, { useState } from "react";
+import icon from "../pic/theraphists/icon.svg";
+import pic1 from "../pic/theraphists/pic1.jpeg";
+import pic2 from "../pic/theraphists/pic2.jpg";
+import pic3 from "../pic/theraphists/pic3.jpg";
+import pic1hover from "../pic/theraphists/pic1hover.jpg";
+import pic2hover from "../pic/theraphists/pic2hover.jpg";
+import pic3hover from "../pic/theraphists/pic3hover.jpeg";
+import hu from "../assets/languages/lang-hu.json";
+import en from "../assets/languages/lang-en.json";
+
+const TherapistListComp = props => {
+  let collagues;
+  props.language==='HU'? collagues = hu.collagues: collagues = en.collagues;
+  const picArray = [pic1, pic2, pic3];
+  const picArrayHover = [pic1hover, pic2hover, pic3hover];
+  const [currentTherapist, setCurrentTherapist] = useState("");
+  const [animation, setAnimation] = useState("");
+  const [animationBackground, setAnimationBackground] = useState("");
+  const setTherapistByOnclick = event => {
+    setAnimation("");
+    setAnimationBackground("");
+    setCurrentTherapist(event.target.id);
+  };
+  const resetTherapistByOnclick = () => {
+    setAnimation("fade-out");
+    setAnimationBackground("fade-out-background");
+    setTimeout(() => {
+      setCurrentTherapist("");
+    }, 500);
+  };
+  const closeThePopUp = (event) => {
+    const container = document.getElementsByClassName('therapist-details')[0];
+    if(event.target !== container && event.target.parentNode !== container){
+      resetTherapistByOnclick();
+    }
+  }
+  return (
+    <>
+      <div className="therapist-wrapper" id="collagues">
+        <div className="therapist-heading">
+          <h3>{collagues.collagues}</h3>
+          <img src={icon} />
+        </div>
+        <div className="therapist-pictures">
+          {picArray.map((element, index) => {
+            return (
+              <div className="therapist">
+                <img
+                  src={element}
+                  onMouseOver={e => {
+                    e.currentTarget.src = picArrayHover[index];
+                  }}
+                  onMouseLeave={e => (e.currentTarget.src = element)}
+                  id={collagues.therapists[index].name}
+                  onClick={setTherapistByOnclick}
+                />
+                <div className="therapist-info">
+                  <h4>{collagues.therapists[index].name}</h4>
+                  <p>{collagues.therapists[index].occupation}</p>
+                  <button>{collagues.details}</button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {currentTherapist !== "" ? (
+        <div className="therapist-details-container" id={animationBackground} onMouseUp={closeThePopUp}>
+          <div className="close-button" onClick={resetTherapistByOnclick} />
+          <div className="therapist-details" id={animation}>
+            {collagues.therapists.map(element => {
+              return element.name === currentTherapist ? (
+                <p>{element.details}</p>
+              ) : (
+                null
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+};
+
+export default TherapistListComp;
