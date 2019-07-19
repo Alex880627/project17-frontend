@@ -40,13 +40,14 @@ const TherapistListComp = props => {
       <div className="therapist-wrapper" id="collagues">
         <div className="therapist-heading">
           <h3>{collagues.collagues}</h3>
-          <img src={icon} />
+          <img src={icon} alt="therapist icon"/>
         </div>
         <div className="therapist-pictures">
           {picArray.map((element, index) => {
             return (
-              <div className="therapist">
+              <div className="therapist" key={element}>
                 <img
+                  key={`${element} image`}
                   src={element}
                   onMouseOver={e => {
                     e.currentTarget.src = picArrayHover[index];
@@ -54,8 +55,9 @@ const TherapistListComp = props => {
                   onMouseLeave={e => (e.currentTarget.src = element)}
                   id={collagues.therapists[index].name}
                   onClick={setTherapistByOnclick}
+                  alt="studio 17 therapist"
                 />
-                <div className="therapist-info">
+                <div className="therapist-info"  key={`${element} info`}>
                   <h4>{collagues.therapists[index].name}</h4>
                   <p>{collagues.therapists[index].occupation}</p>
                   <button>{collagues.details}</button>
@@ -71,7 +73,7 @@ const TherapistListComp = props => {
           <div className="therapist-details" id={animation}>
             {collagues.therapists.map(element => {
               return element.name === currentTherapist ? (
-                <p>{element.details}</p>
+                <p key={`${element.name}`}>{element.details}</p>
               ) : (
                 null
               );

@@ -4,13 +4,16 @@ body, html {
   scroll-behavior: smooth;
 }
 
+@import './_variables.scss';
 @import './_therapist-list-style.scss';
 @import './_nav-bar.scss';
 @import './_language-picker-button.scss';
 @import './_galery.scss';
 @import './_close-button.scss';
-@import './contacts.scss';
-@import './landing-page.scss';
-@import './group-sessions.scss';
-@import './prices.scss';
-@import './footer.scss';
+@import './_contacts.scss';
+@import './_landing-page.scss';
+@import './_group-sessions.scss';
+@import './_prices.scss';
+@import './_footer.scss';
+@import './_hamburger-menu.scss';
+@import './_side-bar.scss';

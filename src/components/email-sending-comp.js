@@ -30,7 +30,7 @@ const EmailSendingComp = ({ email, language }) => {
           onFocus={removePlaceholder}
           onBlur={e => (e.target.placeholder = email["email input"])}
           required
-          autocomplete="off"
+          autoComplete="off"
           onChange={e => {
             setUserEmail(handleChange(e));
           }}
@@ -42,7 +42,7 @@ const EmailSendingComp = ({ email, language }) => {
           onFocus={removePlaceholder}
           onBlur={e => (e.target.placeholder = email["name input"])}
           required
-          autocomplete="off"
+          autoComplete="off"
           onChange={e => {
             setUserName(handleChange(e));
           }}
@@ -56,7 +56,7 @@ const EmailSendingComp = ({ email, language }) => {
           rows="7"
           cols="40"
           required
-          autocomplete="off"
+          autoComplete="off"
           onChange={e => {
             setUserMessage(handleChange(e));
           }}

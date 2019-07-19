@@ -20,6 +20,7 @@ const Map = (props) => {
     } else {
       onScriptLoad();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
     return (
       <div id={props.id} />

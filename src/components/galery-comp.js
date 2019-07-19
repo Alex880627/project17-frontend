@@ -135,7 +135,7 @@ class App extends Component {
           <div className="controll-buttons-wrapper">
             {pictures.map((picture, index) => {
               return (
-                <div
+                <div key={index}
                   id={index}
                   onClick={this.changePicByClick}
                   className={
@@ -149,10 +149,10 @@ class App extends Component {
           </div>
           <div
             className="pictures-wrapper"
-            style={{ left: `${picPosition}%`, transition: "left 0.6s ease-in" }}
+            style={{ left: `${picPosition}vw`, transition: "left 0.6s ease-in" }}
           >
             {pictures.map((picture, index) => {
-              return <img src={picture} id={index} alt="gyógytorna" />;
+              return <img src={picture} id={index} alt="gyógytorna" key={index}/>;
             })}
           </div>
         </div>

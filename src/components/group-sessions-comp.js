@@ -45,28 +45,33 @@ const GroupSessionsContainer = props => {
         <div className="blur-wrapper" />
         <div className="group-sessions-heading">
           <h3>{groupSessions["group sessions title"]}</h3>
-          <img src={timeTableIconWhite} />
+          <img src={timeTableIconWhite} alt="time table icon"/>
         </div>
+          <div className="group-sessions-description">
+          
+          <p>{groupSessions.description}</p>
+          <h4>{groupSessions.interval}</h4>
+          </div>
+          
         <table>
           <tbody>
             <tr>
               <th />
               {Object.entries(groupSessions.days).map(element => {
-                return <th>{element[1]}</th>;
+                return <th key={element[0]}>{element[1]}</th>;
               })}
             </tr>
             {makeMultiArrayFromDataByHours(mockdata["sessions dates"]).map(
               element => {
-                console.log();
                 return (
-                  <tr>
+                  <tr key={`${Math.random()}`}>
                     <td>{element[0].hour}</td>
                     {Object.keys(groupSessions.days).map(day => {
                       const filteredTableData = element.filter(data => {
                         return data.day === day;
                       });
                       return filteredTableData.length !== 0 ? (
-                        <td
+                        <td key={`${Math.random()}`}
                           style={{
                             backgroundColor: getColorForTherapist(
                               filteredTableData[0].therapist
@@ -78,7 +83,7 @@ const GroupSessionsContainer = props => {
                           <p>{filteredTableData[0].signed}</p>
                         </td>
                       ) : (
-                        <td />
+                        <td key={`${Math.random()}`}/> // eslint-disable-line no-use-before-define
                       );
                     })}
                   </tr>

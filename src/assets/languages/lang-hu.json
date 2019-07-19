@@ -49,7 +49,9 @@
     }
   },
   "group sessions": {
-    "group sessions title": "Csoportos órák",
+    "group sessions title": "Evminov csoportos órák",
+    "interval": "Időtartam: 45-55 perc",
+    "description": "Az Evminov padon fekve, nyújtózkodó helyzetben végzett izomerősítő gyakorlatok hatékonyan és gyorsan csökkentik a porckorng problémák miatt kialakult fájdalmakat. Miközben a gerincmelletti mély hátizmokat és a hasizmokat is erősíti, így a padról leszállva, a nyújtott helyzett végével sem szűnik meg hatása. A csoportos órán bemelgítés után, nyújtó és erősítő gyakorlatok kombinációja zajlik. Időt hagyva a megfelelő mennyiségű pihenésnek is.  Napod bármelyik pontján kikapcsol és átmozgat! ",
     "days": {
       "monday": "Hétfő",
       "tuesday": "Kedd",

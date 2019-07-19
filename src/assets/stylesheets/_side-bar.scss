@@ -1,0 +1,44 @@
+.side-bar-wrapper {
+  z-index: 5;
+  left: 0;
+  top: 8em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 0.5s;
+  .side-bar {
+    position: relative;
+    z-index: 5;
+    background-color: rgba($mainGreencolor, 0.8);
+    width: 100%;
+    height: auto;
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      a {
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        &:active {
+          background-color: rgba(black, 0.5);
+        }
+        &:hover {
+          background-color: rgba(black, 0.5);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .side-bar-wrapper {
+    position: fixed;
+    top: 8em;
+  }
+}

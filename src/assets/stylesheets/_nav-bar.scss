@@ -1,41 +1,47 @@
 .main-navbar {
-  font-size: 16px;
+  font-size: 0.9em;
   width: 100%;
-  position: sticky;
-  padding: 50px;
+  position: absolute;
+  padding: 3.125em;
   padding-bottom: 38px;
   overflow: visible;
-  height: 50px;
+  height: 3.125em;
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 148, 138, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
 }
 
-.main-navbar > div {
-  flex-grow: 1;
-  color: rgba(255, 255, 255, 0.7);
+.main-navbar > .navigation {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items:center;
   justify-content: space-around;
-  align-items: center;
+  flex-grow:1;
 }
 
 .main-navbar > div > a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   margin-left: 20px;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
 }
 
+.main-navbar > div > a:last-child {
+  margin-right: 20px;
+}
+
 .main-navbar > div > a::after {
-  content: '';
+  content: "";
   margin-top: 5px;
   display: block;
   width: 0;
   height: 1px;
   background: rgb(255, 255, 255);
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .main-navbar > div > a:hover {
@@ -43,10 +49,9 @@
   cursor: pointer;
 }
 
-.main-navbar > div > a:hover::after{
+.main-navbar > div > a:hover::after {
   width: 100%;
 }
-
 
 .up-button {
   z-index: 1;
@@ -54,7 +59,7 @@
   height: 80px;
   position: fixed;
   top: 80%;
-  left: 90%;
+  right: 3%;
 }
 
 .up-button > a {
@@ -64,7 +69,7 @@
   height: 80px;
 }
 
-.up-button > a > img{
+.up-button > a > img {
   transition: opacity 0.3s;
   z-index: 1;
   width: 80px;
@@ -72,7 +77,7 @@
 }
 
 .visible {
-  opacity: 0.7;
+  opacity: $mainOpacity;
   animation: bounceInRight 1s;
 }
 
@@ -84,9 +89,9 @@
 }
 
 .up-button > a > img:hover {
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 0.3s;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 @keyframes bounceInRight {
   from,
@@ -117,5 +122,12 @@
 
   to {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-navbar {
+    position: fixed;
+    top: 0;
   }
 }

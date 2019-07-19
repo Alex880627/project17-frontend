@@ -48,7 +48,9 @@
     }
   },
   "group sessions": {
-    "group sessions title": "Group therapy",
+    "group sessions title": "Evminov group sessions",
+    "interval": "Time interval: 45-55 minutes",
+    "description": "Az Evminov padon fekve, nyújtózkodó helyzetben végzett izomerősítő gyakorlatok hatékonyan és gyorsan csökkentik a porckorng problémák miatt kialakult fájdalmakat. Miközben a gerincmelletti mély hátizmokat és a hasizmokat is erősíti, így a padról leszállva, a nyújtott helyzett végével sem szűnik meg hatása. A csoportos órán bemelgítés után, nyújtó és erősítő gyakorlatok kombinációja zajlik. Időt hagyva a megfelelő mennyiségű pihenésnek is.  Napod bármelyik pontján kikapcsol és átmozgat! ",
     "days": {
       "monday": "Monday",
       "tuesday": "Tuesday",
@@ -80,7 +82,7 @@
         "duration": "55/30 minutes"
       },
       {
-        "name": "Group therapy",
+        "name": "Group sessions",
         "description": "Gruppe powder candy canes cake candy canes sesame snaps jujubes. Pastry dragée jelly-o. Cake tart jelly beans icing sugar plum sugar plum tiramisu.",
         "price": "2500 HUF",
         "duration": "55 minutes"
@@ -88,7 +90,7 @@
     ]
   },
   "footer": {
-    "copyright":"All rights reserved!",
+    "copyright": "All rights reserved!",
     "email": {
       "email header": "Write e-mail for us!",
       "email input": "Enter your e-mail address",

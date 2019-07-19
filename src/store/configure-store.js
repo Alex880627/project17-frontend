@@ -3,12 +3,12 @@ import "regenerator-runtime/runtime"
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers/root-reducer';
 
 
-export const history = createHistory();
+export const history = createBrowserHistory();
 
 const configureStoreProd = () => {
   const reactRouterMiddleware = routerMiddleware(history)

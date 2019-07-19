@@ -13,7 +13,7 @@ const ContactsComp = props => {
     <div className="contacts-wrapper" id="contacts">
       <div className="contacts-heading">
         <h3>{contacts["contacts title"]}</h3>
-        <img src={contactsIcon} />
+        <img src={contactsIcon} alt="contacts icon"/>
       </div>
       <div className="address-details">
         <h4>{contacts["contacts info"].name}</h4>

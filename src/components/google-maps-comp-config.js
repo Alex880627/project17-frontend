@@ -11,11 +11,11 @@ const createInfoWindow = (e, map) => {
       position: { lat: e.latLng.lat(), lng: e.latLng.lng() }
   })
   InfoWindow.addListener('domready', e => {
+    // eslint-disable-next-line 
     return <InfoWindow />, document.getElementById('infoWindow');
   })
   InfoWindow.open(map)
 }
-
 
 const GoogleMapConfigured = () => {
   return (

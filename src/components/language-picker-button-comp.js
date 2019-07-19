@@ -7,11 +7,11 @@ const LanguagePickerButton = (props) => {
   return (
     <ul className="languagepicker">
         <li>
-          <img src={language==='HU'? huFlag:enFlag} />
+          <img src={language==='HU'? huFlag:enFlag} alt="flag" />
           {language==='HU'? 'Magyar':'English'}
         </li>
         <li onClick={language==='HU'? changeLanguageToEN:changeLanguageToHU}>
-          <img src={language==='HU'? enFlag:huFlag} />
+          <img src={language==='HU'? enFlag:huFlag} alt="flag"/>
           {language==='HU'? 'Angol':'Hungarian'}
         </li>
     </ul>

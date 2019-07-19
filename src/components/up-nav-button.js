@@ -13,8 +13,8 @@ const UpNavButton = () => {
   window.addEventListener("scroll", onScroll);
   return (
     <nav className="up-button">
-      <a href="#navigation">
-        <img src={upButton} className={visibility} />
+      <a href="#page-up">
+        <img src={upButton} className={visibility} alt="up button"/>
       </a>
     </nav>
   );

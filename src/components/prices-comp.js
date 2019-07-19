@@ -10,12 +10,12 @@ const PricesComp = props => {
     <div className="prices-wrapper" id="prices">
       <div className="prices-heading">
         <h3>{prices["prices title"]}</h3>
-        <img src={pricesIcon} />
+        <img src={pricesIcon} alt="price icon"/>
       </div>
       <div className="treatements-list-wrapper">
       {prices.treatments.map(element => {
         return (
-          <div className="treatements-list">
+          <div className="treatements-list" key={element.name}>
             <h3>{element.name}</h3>
             <p>{element.price}</p>
             <p>{`/${prices.occasion} (${element.duration})`}</p>

@@ -10,10 +10,9 @@ import PricesContainer from "./containers/prices-container";
 import * as serviceWorker from "./serviceWorker";
 import ContactsContainer from "./containers/contacts-container";
 import FooterContainer from "./containers/footer-container";
-import * as mainCss from "./assets/stylesheets/main.css";
+import "./assets/stylesheets/main.css";
 
 const store = configureStore();
-
 ReactDOM.render(
   <Provider store={store}>
     <LandinPage />
