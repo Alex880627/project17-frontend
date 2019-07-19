@@ -148,23 +148,101 @@ body, html {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: width height 0.5s;
   transition: width height 0.5s;
 }
 
+.therapist-details-container ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+
 .therapist-details {
+  overflow: auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 30px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 20px 1px black;
           box-shadow: 0px 0px 20px 1px black;
-  background-color: white;
-  margin: 30px;
+  background-color: #007a72;
   max-width: 700px;
-  height: 90%;
+  height: auto;
   color: black;
   -webkit-animation: slideInDown 0.3s;
           animation: slideInDown 0.3s;
+}
+
+.therapist-details div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.therapist-details div div {
+  background-color: #272a2f;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.therapist-details div div h3 {
+  padding-left: 30px;
+  font-size: 30px;
+}
+
+.therapist-details div p {
+  font-size: 15px;
+  text-indent: 20px;
+  margin-top: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #202020;
+  text-align: justify;
+}
+
+.therapist-details div p img {
+  float: right;
+  width: 50%;
+  height: auto;
+  -ms-flex-line-pack: right;
+      align-content: right;
+  margin: 0 -20px 10px 10px;
+}
+
+.therapist-details div p h4 {
+  text-indent: 20px;
+  margin: 30px 0 30px 0;
+  width: 45%;
+  float: left;
 }
 
 #fade-out-background {
@@ -268,14 +346,11 @@ body, html {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .main-navbar > div > a {
+  margin-right: 30px;
   color: rgba(255, 255, 255, 0.8);
-  margin-left: 20px;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -520,7 +595,7 @@ body {
 }
 
 .pictures-wrapper img {
-  width: 100vw;
+  width: 1280px;
   height: 100vh;
   position: relative;
   margin: 0 auto;
@@ -814,19 +889,20 @@ body {
   z-index: 0;
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875em;
 }
 
 .group-sessions-heading > img {
   height: auto;
-  width: 80px;
+  width: 5em;
   margin-bottom: 30px;
   z-index: 0;
 }
 
 .blur-wrapper {
   background-color: black;
-  background-size: cover;
+  width: 100%;
+  height: auto;
   position: absolute;
   left: 0;
   right: 0;
@@ -837,29 +913,30 @@ body {
 
 .group-sessions-description {
   color: white;
-  z-index: 2;
-  max-width: 650px;
+  z-index: 0;
+  max-width: 40.625em;
   text-align: justify;
 }
 
 td, th {
   z-index: 0;
   background-color: white;
-  color: black;
+  color: white;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.313em;
   text-align: center;
 }
 
 table {
   z-index: 0;
-  width: 650px;
+  width: 40.625em;
+  margin-bottom: 5%;
 }
 
 th {
-  padding: 15px;
-  background-color: #333333;
-  color: white;
+  padding: 25px 5px 25px 5px;
+  background-color: #007a72;
+  color: black;
   border: 1px solid #646464;
 }
 
@@ -868,7 +945,7 @@ tr, td {
 }
 
 tr, td > h3 {
-  line-height: 3px;
+  line-height: 0.188em;
 }
 
 tr, td > p {
@@ -877,9 +954,18 @@ tr, td > p {
 
 tr > td:first-child {
   text-align: center;
-  color: white;
-  background-color: #333333;
+  color: black;
+  background-color: #007a72;
   border: 1px solid #646464;
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    width: 95%;
+  }
+  .group-sessions-description {
+    max-width: 95%;
+  }
 }
 
 .prices-wrapper {
@@ -957,9 +1043,11 @@ tr > td:first-child {
 }
 
 .treatements-list:hover {
-  background-color: #eb4335;
-  background: -webkit-gradient(linear, left top, left bottom, from(#eb4335), color-stop(30%, #333333));
-  background: linear-gradient(180deg, #eb4335 0%, #333333 30%);
+  background-color: #EB4335;
+  -webkit-box-shadow: 0px 0px 18px 5px black;
+          box-shadow: 0px 0px 18px 5px black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EB4335), color-stop(30%, #333333));
+  background: linear-gradient(180deg, #EB4335 0%, #333333 30%);
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
@@ -1243,9 +1331,11 @@ tr > td:first-child {
 .side-bar-wrapper .side-bar {
   position: relative;
   z-index: 5;
-  background-color: rgba(0, 122, 114, 0.8);
+  background-color: #007a72;
   width: 100%;
   height: auto;
+  -webkit-box-shadow: 0px 0px 20px 1px black;
+          box-shadow: 0px 0px 20px 1px black;
 }
 
 .side-bar-wrapper .side-bar .navigation {
@@ -1259,20 +1349,25 @@ tr > td:first-child {
 }
 
 .side-bar-wrapper .side-bar .navigation a {
+  font-weight: bold;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: none;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
+  color: #272a2f;
 }
 
 .side-bar-wrapper .side-bar .navigation a:active {
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 1;
 }
 
 .side-bar-wrapper .side-bar .navigation a:hover {
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {

@@ -19,18 +19,19 @@
   z-index: 0;
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875em;
 }
 .group-sessions-heading > img {
   height: auto;
-  width: 80px;
+  width: 5em;
   margin-bottom: 30px;
   z-index: 0;
 }
 
 .blur-wrapper {
   background-color: rgb(0, 0, 0);
-  background-size: cover;
+  width: 100%;
+  height: auto;
   position: absolute;
   left: 0;
   right: 0;
@@ -41,29 +42,30 @@
 
  .group-sessions-description {
    color: white;
-   z-index: 2;
-   max-width: 650px;
+   z-index: 0;
+   max-width: 40.625em;
    text-align: justify;
  }
 
  td, th {
    z-index: 0;
    background-color: white;
-   color: black;
+   color: rgb(255, 255, 255);
    font-weight: bold;
-   border-radius: 5px;
+   border-radius: 0.313em;
    text-align: center;
  }
 
  table {
    z-index: 0;
-   width: 650px;
+   width: 40.625em;
+   margin-bottom: 5%;
  }
 
  th {
-  padding: 15px;
-  background-color: rgb(51, 51, 51);
-  color: white;
+  padding: 25px 5px 25px 5px;
+  background-color:  $mainGreencolor;
+  color:rgb(0, 0, 0);
   border: 1px solid rgb(100, 100, 100);
  }
 
@@ -72,7 +74,7 @@
  }
 
  tr, td > h3 {
-  line-height: 3px;
+  line-height: 0.188em;
 }
 tr, td > p {
   font-weight: 100;
@@ -80,7 +82,16 @@ tr, td > p {
 
  tr > td:first-child {
    text-align: center;
-   color: white;
-   background-color: rgb(51, 51, 51);
+   color: rgb(0, 0, 0);
+   background-color: $mainGreencolor;
    border: 1px solid rgb(100, 100, 100);
  }
+
+ @media only screen and (max-width: 768px) {
+  table {
+    width: 95%;
+  }
+  .group-sessions-description {
+    max-width: 95%;
+  }
+}

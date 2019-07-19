@@ -13,7 +13,8 @@ class App extends Component {
       currentPic: 0,
       initialPicPosition: 0,
       picPosition: 0,
-      slideShowDirectionVar: 1
+      slideShowDirectionVar: 1,
+      innerWidth: window.innerWidth
     };
     this.changePicByClick = this.changePicByClick.bind(this);
     this.autoChangePic = this.autoChangePic.bind(this);
@@ -26,9 +27,25 @@ class App extends Component {
     this.interval = setInterval(() => {
       this.autoChangePic();
     }, 5000);
+    window.addEventListener("resize", () => {
+      this.setState({ innerWidth: window.innerWidth });
+    });
+  }
+  calculateScreen() {
+    return window.screen.availHeight*1.77777777777
+  }
+  calculateOffset() {
+    return (
+      ((this.calculateScreen()) -
+        this.state.innerWidth) /
+      2
+    );
   }
   componentWillUnmount() {
     clearInterval(this.interval);
+    window.removeEventListener("resize", () => {
+      this.setState({ innerWidth: this.state.innerWidth });
+    });
   }
   updateStateWithDirection(slideShowDirectionVar, currentPic) {
     const { pictures } = this.state;
@@ -37,7 +54,8 @@ class App extends Component {
         currentPic: Number(prevState.currentPic) + slideShowDirectionVar,
         picPosition:
           this.state.initialPicPosition -
-          (Number(currentPic) + slideShowDirectionVar) * 100
+          (Number(currentPic) + slideShowDirectionVar) *
+            this.calculateScreen()
       }));
     }
   }
@@ -70,7 +88,9 @@ class App extends Component {
     this.clearIntervalAndSetNew();
     this.setState({
       currentPic: event.target.id,
-      picPosition: this.state.initialPicPosition - event.target.id * 100
+      picPosition:
+        this.state.initialPicPosition -
+          event.target.id * this.calculateScreen()
     });
     if (Number(event.target.id) === 0 || Number(event.target.id) === 1) {
       this.setState({
@@ -87,10 +107,10 @@ class App extends Component {
   }
   onMouseOut = () => {
     this.clearIntervalAndSetNew();
-  }
+  };
   onMouseOver = () => {
     clearInterval(this.interval);
-  }
+  };
   changePicByArrows(event) {
     const direction = event.target.className;
     const { currentPic, pictures } = this.state;
@@ -125,8 +145,12 @@ class App extends Component {
     const { currentPic, pictures, picPosition } = this.state;
     return (
       <div className="pic-galery-wrapper">
-        <div className="pic-galery" onMouseOut={this.onMouseOut} onMouseOver={this.onMouseOver}>
-         {/*  <div onClick={this.changePicByArrows} className="arrow left">
+        <div
+          className="pic-galery"
+          onMouseOut={this.onMouseOut}
+          onMouseOver={this.onMouseOver}
+        >
+          {/*  <div onClick={this.changePicByArrows} className="arrow left">
             <div />
           </div>
           <div onClick={this.changePicByArrows} className="arrow right">
@@ -135,7 +159,8 @@ class App extends Component {
           <div className="controll-buttons-wrapper">
             {pictures.map((picture, index) => {
               return (
-                <div key={index}
+                <div
+                  key={index}
                   id={index}
                   onClick={this.changePicByClick}
                   className={
@@ -149,10 +174,24 @@ class App extends Component {
           </div>
           <div
             className="pictures-wrapper"
-            style={{ left: `${picPosition}vw`, transition: "left 0.6s ease-in" }}
+            style={{
+              left: `${picPosition - this.calculateOffset()}px`,
+              transition: "left 0.6s ease-in"
+            }}
           >
             {pictures.map((picture, index) => {
-              return <img src={picture} id={index} alt="gyógytorna" key={index}/>;
+              return (
+                <img
+                  style={{
+                    width:
+                    this.calculateScreen()
+                  }}
+                  src={picture}
+                  id={index}
+                  alt="gyógytorna"
+                  key={index}
+                />
+              );
             })}
           </div>
         </div>

@@ -19,12 +19,11 @@
   display: flex;
   align-items:center;
   justify-content: space-around;
-  flex-grow:1;
 }
 
 .main-navbar > div > a {
+  margin-right: 30px;
   color: rgba(255, 255, 255, 0.8);
-  margin-left: 20px;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;

@@ -11,24 +11,30 @@
   .side-bar {
     position: relative;
     z-index: 5;
-    background-color: rgba($mainGreencolor, 0.8);
+    background-color: $mainGreencolor;
     width: 100%;
     height: auto;
+    box-shadow: 0px 0px 20px 1px black;
     .navigation {
       display: flex;
       flex-direction: column;
       a {
+        font-weight: bold;
         padding: 20px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-bottom: none;
         text-transform: uppercase;
         text-decoration: none;
-        color: white;
+        color: rgb(39, 42, 47);
         &:active {
           background-color: rgba(black, 0.5);
+          color: white;
+          opacity: 1;
         }
         &:hover {
           background-color: rgba(black, 0.5);
+          color: white;
+          opacity: 1;
         }
       }
     }
@@ -42,3 +48,4 @@
     top: 8em;
   }
 }
+

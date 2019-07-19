@@ -12,22 +12,28 @@
     "therapists": [
       {
         "name": "Sugár Szilvia",
+        "picture": "/static/media/pic1.43ddf621.jpeg",
+        "picture hover": "/static/media/pic1hover.06be7bc7.jpg",
         "nick name": "Szilvi",
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "details": "Sugár Szilvia is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#659df7"
+        "color": "#eb4335"
       },
       {
         "name": "Csikós Panka",
+        "picture": "/static/media/pic2.778bb47f.jpg",
+        "picture hover": "/static/media/pic2hover.949b10e8.jpg",
         "nick name": "Panka",
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
-        "details": "Csikós Panka is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#f982ff"
+        "details": "Semmelweis Egyetem Egészségtudományi Karán gyógytornász szakirány Minden korosztály: ovis tartás-, koordináció javítás, lúdtalptorna Gyermekkorban kialakult gerincferdülés (scoliosis) kezelése felnőtt gerinc problémák: kellemetlen derékfájástól - a súlyos gerincbántalmakig, sport sérülések rehabilitációja és visszatérés, funkcionális köredzés, trx, SMR henger időskori preventív torna, ízületi panaszok enyhítése, mobilitás és függetlenség megőrzése Egyéni és kis csoportos órák, mindenkire és minden apró mozdulatra fokozott figyelem egy barátságos, jó hangulatú torna közben Közösen megfogalmazott célok, közösen végrehajtva, soksok munkával és újabb és újabb sikerélményekkel.",
+        "color": "#506b96"
       },
       {
         "name": "Erasimus Zsuzsa",
+        "picture": "/static/media/pic3.e24298c1.jpg",
+        "picture hover": "/static/media/pic3hover.e1885cf9.jpeg",
         "nick name": "Zsuzsi",
         "occupation": "Gyógymasszőr",
         "phone number": "06202441602",
@@ -51,7 +57,7 @@
   "group sessions": {
     "group sessions title": "Evminov csoportos órák",
     "interval": "Időtartam: 45-55 perc",
-    "description": "Az Evminov padon fekve, nyújtózkodó helyzetben végzett izomerősítő gyakorlatok hatékonyan és gyorsan csökkentik a porckorng problémák miatt kialakult fájdalmakat. Miközben a gerincmelletti mély hátizmokat és a hasizmokat is erősíti, így a padról leszállva, a nyújtott helyzett végével sem szűnik meg hatása. A csoportos órán bemelgítés után, nyújtó és erősítő gyakorlatok kombinációja zajlik. Időt hagyva a megfelelő mennyiségű pihenésnek is.  Napod bármelyik pontján kikapcsol és átmozgat! ",
+    "description": "A csoportos órákra a pontos kezdés miatt érkezz 5-10 perccel korábban, hogy át tudj öltözni kényelmes edző ruhádba. Cipőre nem lesz szükséged. Öltöző, zuhanyzó, törülköző, tusfürdő, papucs, és ivóvíz adott. Az órákon való részvételhez telefonos bejelentkezés szükséges az adott terapeutánál. Lemondás: 12 órával az óra kezdése előtt lehetséges, vagy 50% felszámítás. ",
     "days": {
       "monday": "Hétfő",
       "tuesday": "Kedd",
