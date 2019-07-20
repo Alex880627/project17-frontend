@@ -6,16 +6,28 @@ import pricesIcon from "../pic/icons/wallet-icon.png";
 const PricesComp = props => {
   let prices = "HU";
   props.language === "HU" ? (prices = hu.prices) : (prices = en.prices);
-  const hoverOnScroll = event => {
-    const container = document.elementFromPoint(
-      window.innerHeight / 2,
-      window.innerWidth / 3
-    );
-    if (
-      container.className === "treatements-list" ||
-      container.parentNode.className === "treatements-list"
-    ) {
-      const treatementList = document.querySelector
+  let prevContainer = "";
+  const hoverOnScroll = () => {
+    if (window.innerWidth < 769) {
+      const container = document.elementFromPoint(
+        window.innerWidth / 2,
+        (window.innerHeight / 3) * 2
+      );
+      console.log(container.parentElement);
+      if (
+        (prevContainer !== "" &&
+          prevContainer !== container &&
+          container.className === "treatements-list") ||
+        (container.parentElement.id === "root" && prevContainer !== "")
+      ) {
+        prevContainer.classList.remove("onhover");
+      }
+      if (container.className === "treatements-list") {
+        if (!container.classList.contains("onhover")) {
+          container.classList.add("onhover");
+        }
+        prevContainer = container;
+      }
     }
   };
 
@@ -25,7 +37,6 @@ const PricesComp = props => {
       window.removeEventListener("scroll", hoverOnScroll);
     };
   }, []);
-
   return (
     <div className="prices-wrapper" id="prices">
       <div className="prices-heading">
