@@ -12,8 +12,6 @@
     "therapists": [
       {
         "name": "Sugár Szilvia",
-        "picture": "/static/media/pic1.43ddf621.jpeg",
-        "picture hover": "/static/media/pic1hover.06be7bc7.jpg",
         "nick name": "Szilvi",
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
@@ -22,8 +20,6 @@
       },
       {
         "name": "Csikós Panka",
-        "picture": "/static/media/pic2.778bb47f.jpg",
-        "picture hover": "/static/media/pic2hover.949b10e8.jpg",
         "nick name": "Panka",
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
@@ -32,8 +28,6 @@
       },
       {
         "name": "Erasimus Zsuzsa",
-        "picture": "/static/media/pic3.e24298c1.jpg",
-        "picture hover": "/static/media/pic3hover.e1885cf9.jpeg",
         "nick name": "Zsuzsi",
         "occupation": "Gyógymasszőr",
         "phone number": "06202441602",

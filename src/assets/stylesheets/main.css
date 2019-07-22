@@ -321,7 +321,7 @@ body, html {
   width: 100%;
   position: absolute;
   padding: 3.125em;
-  padding-bottom: 38px;
+  padding-bottom: 2.375em;
   overflow: visible;
   height: 3.125em;
   z-index: 3;
@@ -349,7 +349,7 @@ body, html {
 }
 
 .main-navbar > div > a {
-  margin-right: 30px;
+  margin-right: 1.875em;
   color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   text-decoration: none;
@@ -362,7 +362,7 @@ body, html {
 
 .main-navbar > div > a::after {
   content: "";
-  margin-top: 5px;
+  margin-top: 0.313em;
   display: block;
   width: 0;
   height: 1px;
@@ -382,8 +382,8 @@ body, html {
 
 .up-button {
   z-index: 1;
-  width: 80px;
-  height: 80px;
+  width: 5em;
+  height: 5em;
   position: fixed;
   top: 80%;
   right: 3%;
@@ -392,16 +392,16 @@ body, html {
 .up-button > a {
   position: relative;
   z-index: 1;
-  width: 80px;
-  height: 80px;
+  width: 5em;
+  height: 5em;
 }
 
 .up-button > a > img {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 1;
-  width: 80px;
-  height: 75px;
+  width: 5em;
+  height: 4.688em;
 }
 
 .visible {

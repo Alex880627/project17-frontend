@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import icon from "../pic/theraphists/icon.svg";
+import pic1 from "../pic/theraphists/pic1.jpeg"
+import pic2 from "../pic/theraphists/pic2.jpg"
+import pic3 from "../pic/theraphists/pic3.jpg"
+import pic1hover from "../pic/theraphists/pic1hover.jpg"
+import pic2hover from "../pic/theraphists/pic2hover.jpg"
+import pic3hover from "../pic/theraphists/pic3hover.jpeg"
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 
@@ -8,10 +14,8 @@ const TherapistListComp = props => {
   props.language === "HU"
     ? (collagues = hu.collagues)
     : (collagues = en.collagues);
-  const picArray = collagues.therapists.map(element => element.picture);
-  const picArrayHover = collagues.therapists.map(
-    element => element["picture hover"]
-  );
+  const picArray = [pic1,pic2,pic3];
+  const picArrayHover = [pic1hover,pic2hover,pic3hover];
   const [currentTherapist, setCurrentTherapist] = useState("");
   const [animation, setAnimation] = useState("");
   const [animationBackground, setAnimationBackground] = useState("");
@@ -73,13 +77,13 @@ const TherapistListComp = props => {
         >
           <div className="close-button" onClick={resetTherapistByOnclick} />
           <div className="therapist-details" id={animation}>
-            {collagues.therapists.map(element => {
+            {collagues.therapists.map((element, index) => {
               return element.name === currentTherapist ? (
                 <div key={element.name}>
                   <div>
                     <h3>{element.name}</h3>
                   </div>
-                  <p><h4>{`${element.occupation}`}</h4><img src={element.picture} alt={element.name}/>{element.details}</p>
+                  <p><h4>{`${element.occupation}`}</h4><img src={picArray[index]} alt={element.name}/>{element.details}</p>
                 </div>
               ) : null;
             })}
