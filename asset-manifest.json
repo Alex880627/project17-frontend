@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/project17-frontend/static/css/main.ae19cdc3.chunk.css",
+    "main.css": "/project17-frontend/static/css/main.1dc600d8.chunk.css",
     "main.js": "/project17-frontend/static/js/main.4abc3103.chunk.js",
     "main.js.map": "/project17-frontend/static/js/main.4abc3103.chunk.js.map",
     "runtime~main.js": "/project17-frontend/static/js/runtime~main.d5cc3d3c.js",
@@ -8,9 +8,9 @@
     "static/js/2.fd6d9e7f.chunk.js": "/project17-frontend/static/js/2.fd6d9e7f.chunk.js",
     "static/js/2.fd6d9e7f.chunk.js.map": "/project17-frontend/static/js/2.fd6d9e7f.chunk.js.map",
     "index.html": "/project17-frontend/index.html",
-    "precache-manifest.de0d920f12c504f905fe93118d3b2210.js": "/project17-frontend/precache-manifest.de0d920f12c504f905fe93118d3b2210.js",
+    "precache-manifest.4ac72a904804a2f89bcd207c005081b0.js": "/project17-frontend/precache-manifest.4ac72a904804a2f89bcd207c005081b0.js",
     "service-worker.js": "/project17-frontend/service-worker.js",
-    "static/css/main.ae19cdc3.chunk.css.map": "/project17-frontend/static/css/main.ae19cdc3.chunk.css.map",
+    "static/css/main.1dc600d8.chunk.css.map": "/project17-frontend/static/css/main.1dc600d8.chunk.css.map",
     "static/media/arrow-up-icon.png": "/project17-frontend/static/media/arrow-up-icon.35c32a88.png",
     "static/media/contactsIcon.png": "/project17-frontend/static/media/contactsIcon.50595bd0.png",
     "static/media/icon.svg": "/project17-frontend/static/media/icon.feb1305f.svg",
