@@ -14,7 +14,7 @@ const SideBarComp = props => {
     }
   };
   if (props.sideBar === "") {
-    style = { left: "-100%", transition: "left 0.5s ease-in-out" };
+    style = { left: "-130%", transition: "left 0.5s ease-in-out" };
   }
   return (
     <div className="side-bar-wrapper" style={style} onMouseUp={closeThePopUp}>

@@ -1,10 +1,10 @@
 
 #nav-icon1 {
   visibility: hidden;
-  width: 60px;
-  height: 45px;
+  width: 3.75em;
+  height: 2.813em;
   position: relative;
-  margin-left: 50px;
+  margin-left: 3.125em;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -22,7 +22,7 @@
   height: 1px;
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 9px;
+  border-radius: 0.563em;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -40,15 +40,15 @@
 }
 
 #nav-icon1 span:nth-child(2) {
-  top: 18px;
+  top: 1.125em;
 }
 
 #nav-icon1 span:nth-child(3) {
-  top: 36px;
+  top: 2.25em;
 }
 
 #nav-icon1.open span:nth-child(1) {
-  top: 18px;
+  top: 1.125em;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -57,11 +57,11 @@
 
 #nav-icon1.open span:nth-child(2) {
   opacity: 0;
-  left: -60px;
+  left: -3.75em;
 }
 
 #nav-icon1.open span:nth-child(3) {
-  top: 18px;
+  top: 1.125em;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);

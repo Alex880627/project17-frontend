@@ -1,6 +1,6 @@
 .languagepicker {
 	right: 0;
-	font-size: 14px;
+	font-size: 0.875em;
 	border: 1px solid rgba(255, 255, 255, 0.7);
 	min-width: fit-content;
 	color: rgba(255, 255, 255, 0.7);
@@ -8,22 +8,22 @@
 	background-color: transparent;
 	display: inline-block;
 	padding: 0;
-	height: 40px;
+	height: 2.5em;
 	overflow: hidden;
 	transition: all .3s ease;
-	margin: 0 50px 10px 0;
+	margin: 0 3.125em 0.625em 0;
   vertical-align: top;
-	border-radius: 5px;
+	border-radius: 0.313em;
 }
 
 .languagepicker:hover {
-	height: 80px;
+	height: 5em;
 }
 
 .languagepicker li {
 	display: block;
-	padding: 0px 20px;
-	line-height: 40px;
+	padding: 0px 1.25em;
+	line-height: 2.5em;
 }
 
 .languagepicker li:hover {
@@ -38,7 +38,7 @@
 }
 
 .languagepicker li img {
-	margin-right: 5px;
-	width: 18px;
-	height: 12px;
+	margin-right: 0.313em;
+	width: 1.125em;
+	height: 0.75em;
 }
