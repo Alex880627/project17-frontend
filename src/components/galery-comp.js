@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import pic4 from "../pic/pic4.jpg";
 import pic5 from "../pic/pic5.jpg";
 import pic6 from "../pic/pic6.jpg";
 import pic7 from "../pic/pic7.jpg";
@@ -8,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pictures: [pic5, pic6, pic7, pic8],
+      pictures: [pic4, pic5, pic6, pic7, pic8],
       currentPic: 0,
       initialPicPosition: 0,
       picPosition: 0,

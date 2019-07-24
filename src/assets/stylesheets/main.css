@@ -1007,7 +1007,7 @@ tr > td:first-child {
     max-width: 95%;
   }
   td, th {
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
   .group-sessions-description {
     max-width: 95%;

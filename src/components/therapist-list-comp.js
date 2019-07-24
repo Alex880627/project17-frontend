@@ -5,7 +5,7 @@ import pic2 from "../pic/theraphists/pic2.jpg";
 import pic3 from "../pic/theraphists/pic3.jpg";
 import pic1hover from "../pic/theraphists/pic1hover.jpg";
 import pic2hover from "../pic/theraphists/pic2hover.jpg";
-import pic3hover from "../pic/theraphists/pic3hover.jpeg";
+import pic3hover from "../pic/theraphists/pic3hover.jpg";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 
