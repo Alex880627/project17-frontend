@@ -4,7 +4,7 @@ import UpNavButton from "./up-nav-button";
 import NavigationLinksComp from "./navigation-links-comp";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
-import HamburgerMenu from "./hamburger-comp";
+import HamburgerMenu from "./hamburger-icon-comp";
 
 const NavBarComp = props => {
   console.log(props);

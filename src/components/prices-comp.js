@@ -13,7 +13,6 @@ const PricesComp = props => {
         window.innerWidth / 2,
         (window.innerHeight / 3) * 2
       );
-      console.log(container.parentElement);
       if (
         (prevContainer !== "" &&
           prevContainer !== container &&
@@ -36,6 +35,7 @@ const PricesComp = props => {
     return () => {
       window.removeEventListener("scroll", hoverOnScroll);
     };
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="prices-wrapper" id="prices">
