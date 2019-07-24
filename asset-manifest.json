@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/project17-frontend/static/css/main.a26aaf9c.chunk.css",
+    "main.js": "/project17-frontend/static/js/main.f1cab549.chunk.js",
+    "main.js.map": "/project17-frontend/static/js/main.f1cab549.chunk.js.map",
+    "runtime~main.js": "/project17-frontend/static/js/runtime~main.d5cc3d3c.js",
+    "runtime~main.js.map": "/project17-frontend/static/js/runtime~main.d5cc3d3c.js.map",
+    "static/js/2.a1b1263e.chunk.js": "/project17-frontend/static/js/2.a1b1263e.chunk.js",
+    "static/js/2.a1b1263e.chunk.js.map": "/project17-frontend/static/js/2.a1b1263e.chunk.js.map",
+    "index.html": "/project17-frontend/index.html",
+    "precache-manifest.5f96da91e4c90d62ba3a607bac835822.js": "/project17-frontend/precache-manifest.5f96da91e4c90d62ba3a607bac835822.js",
+    "service-worker.js": "/project17-frontend/service-worker.js",
+    "static/css/main.a26aaf9c.chunk.css.map": "/project17-frontend/static/css/main.a26aaf9c.chunk.css.map",
+    "static/media/arrow-up-icon.png": "/project17-frontend/static/media/arrow-up-icon.35c32a88.png",
+    "static/media/contactsIcon.png": "/project17-frontend/static/media/contactsIcon.50595bd0.png",
+    "static/media/icon.svg": "/project17-frontend/static/media/icon.feb1305f.svg",
+    "static/media/pic1.jpeg": "/project17-frontend/static/media/pic1.43ddf621.jpeg",
+    "static/media/pic1hover.jpg": "/project17-frontend/static/media/pic1hover.06be7bc7.jpg",
+    "static/media/pic2.jpg": "/project17-frontend/static/media/pic2.778bb47f.jpg",
+    "static/media/pic2hover.jpg": "/project17-frontend/static/media/pic2hover.949b10e8.jpg",
+    "static/media/pic3.jpg": "/project17-frontend/static/media/pic3.e24298c1.jpg",
+    "static/media/pic3hover.jpeg": "/project17-frontend/static/media/pic3hover.e1885cf9.jpeg",
+    "static/media/pic5.jpg": "/project17-frontend/static/media/pic5.fd4b18bd.jpg",
+    "static/media/pic6.jpg": "/project17-frontend/static/media/pic6.ac866579.jpg",
+    "static/media/pic7.jpg": "/project17-frontend/static/media/pic7.7a6f37ed.jpg",
+    "static/media/pic8.jpg": "/project17-frontend/static/media/pic8.079b6b13.jpg",
+    "static/media/timeTableIconWhite.png": "/project17-frontend/static/media/timeTableIconWhite.4008932f.png"
+  }
+}
