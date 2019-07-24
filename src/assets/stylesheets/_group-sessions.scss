@@ -48,6 +48,7 @@
  }
 
  td, th {
+   font-size: 1.3vw;
    z-index: 0;
    background-color: white;
    color: rgb(255, 255, 255);
@@ -89,7 +90,10 @@ tr, td > p {
 
  @media only screen and (max-width: 768px) {
   table {
-    width: 95%;
+    max-width: 95%;
+  }
+  td, th {
+    font-size: 3vw;
   }
   .group-sessions-description {
     max-width: 95%;
