@@ -20,7 +20,7 @@ const ContactsComp = props => {
         <p>{contacts["contacts info"].address}</p>
         <p>{contacts["contacts info"].city}</p>
         <p>{contacts["contacts info"].ringbell}: {contacts["contacts info"]["ringbell number"]}</p>
-        <p>E-mail: {contacts["contacts info"].email}</p>
+        <p>{contacts["contacts info"].email}</p>
       </div>
       <GoogleMapConfigured />
     </div>

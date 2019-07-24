@@ -50,6 +50,9 @@
   margin-right: auto;
   left: 0;
   right: 0;
+  p {
+    white-space: pre-wrap;
+  }
 }
 
 .address-details > h4 {

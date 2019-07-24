@@ -352,9 +352,10 @@ html {
   width: 100%;
   position: absolute;
   padding: 3.125em;
+  padding-top: 2.375em;
   padding-bottom: 2.375em;
   overflow: visible;
-  height: 3.125em;
+  height: 2.125em;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,6 +366,8 @@ html {
   background-color: rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   white-space: nowrap;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main-navbar > .navigation {
@@ -527,6 +530,9 @@ html {
     position: fixed;
     top: 0;
   }
+  .up-button {
+    visibility: hidden;
+  }
 }
 
 .languagepicker {
@@ -541,17 +547,12 @@ html {
   background-color: transparent;
   display: inline-block;
   padding: 0;
-  height: 2.5em;
   overflow: hidden;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   margin: 0 3.125em 0.625em 0;
   vertical-align: top;
   border-radius: 0.313em;
-}
-
-.languagepicker:hover {
-  height: 5em;
 }
 
 .languagepicker li {
@@ -849,6 +850,10 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
+}
+
+.address-details p {
+  white-space: pre-wrap;
 }
 
 .address-details > h4 {
@@ -1464,7 +1469,7 @@ tr > td:first-child {
 @media only screen and (max-width: 768px) {
   .side-bar-wrapper {
     position: fixed;
-    top: 8em;
+    top: 6em;
   }
 }
 /*# sourceMappingURL=main.css.map */

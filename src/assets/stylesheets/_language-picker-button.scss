@@ -8,16 +8,11 @@
 	background-color: transparent;
 	display: inline-block;
 	padding: 0;
-	height: 2.5em;
 	overflow: hidden;
 	transition: all .3s ease;
 	margin: 0 3.125em 0.625em 0;
   vertical-align: top;
 	border-radius: 0.313em;
-}
-
-.languagepicker:hover {
-	height: 5em;
 }
 
 .languagepicker li {
