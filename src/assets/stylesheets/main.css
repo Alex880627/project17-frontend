@@ -52,7 +52,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 21.875em;
+  max-width: 21.875em;
   height: auto;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -115,7 +115,7 @@ html {
   height: auto;
 }
 
-.therapist-pictures > div > img:hover + .therapist-info {
+.therapist-pictures > div > img:hover + .therapist-info button {
   visibility: visible;
   -webkit-transition: visibility 0.5s;
   transition: visibility 0.5s;
@@ -751,7 +751,7 @@ body {
   bottom: 0;
   width: 1.438em;
   height: 0;
-  border-top: 0.188emsolid #EB4335;
+  border-top: 0.188em solid #EB4335;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transform-origin: center;
@@ -767,7 +767,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 23px;
+  width: 1.438em;
   height: 0;
   border-top: 0.188em solid #EB4335;
   -webkit-transform: rotate(-45deg);
@@ -960,7 +960,7 @@ body {
 }
 
 td, th {
-  font-size: 1.3vw;
+  font-size: 15px;
   z-index: 0;
   background-color: white;
   color: white;
@@ -971,8 +971,9 @@ td, th {
 
 table {
   z-index: 0;
-  width: 40.625em;
+  max-width: 40.625em;
   margin-bottom: 5%;
+  width: 95%;
 }
 
 th {
@@ -1006,7 +1007,7 @@ tr > td:first-child {
     max-width: 95%;
   }
   td, th {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .group-sessions-description {
     max-width: 95%;

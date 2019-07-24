@@ -48,7 +48,7 @@
  }
 
  td, th {
-   font-size: 1.3vw;
+   font-size: 15px;
    z-index: 0;
    background-color: white;
    color: rgb(255, 255, 255);
@@ -59,8 +59,9 @@
 
  table {
    z-index: 0;
-   width: 40.625em;
+   max-width: 40.625em;
    margin-bottom: 5%;
+   width: 95%;
  }
 
  th {
@@ -93,7 +94,7 @@ tr, td > p {
     max-width: 95%;
   }
   td, th {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .group-sessions-description {
     max-width: 95%;

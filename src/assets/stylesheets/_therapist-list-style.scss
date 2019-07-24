@@ -29,7 +29,7 @@
   margin: 0.625em;
   background-color: rgb(0, 0, 0);
   display: flex;
-  width: 21.875em;
+  max-width: 21.875em;
   height: auto;
   justify-content: flex-end;
   flex-direction: column;
@@ -79,7 +79,7 @@
   height: auto;
 }
 
-.therapist-pictures > div > img:hover + .therapist-info {
+.therapist-pictures > div > img:hover + .therapist-info button {
   visibility: visible;
   transition: visibility 0.5s;
 }
