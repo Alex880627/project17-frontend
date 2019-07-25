@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23337d4e08000c5b9f882ea441cea51a",
+    "revision": "fff88f5d6d981c98136c63a17e200563",
     "url": "/project17-frontend/index.html"
   },
   {
-    "revision": "ac7fa3d970c3292819d9",
+    "revision": "45e87cd2bff16f2d4dbc",
     "url": "/project17-frontend/static/css/main.0e4fa569.chunk.css"
   },
   {
@@ -12,20 +12,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/project17-frontend/static/js/2.94936a73.chunk.js"
   },
   {
-    "revision": "ac7fa3d970c3292819d9",
-    "url": "/project17-frontend/static/js/main.3a5df451.chunk.js"
+    "revision": "45e87cd2bff16f2d4dbc",
+    "url": "/project17-frontend/static/js/main.05c1f7cc.chunk.js"
   },
   {
     "revision": "f00624e9e4bde93918d1",
     "url": "/project17-frontend/static/js/runtime~main.d5cc3d3c.js"
   },
   {
-    "revision": "de1ec021adc82d7da57d8e67c3b2e221",
-    "url": "/project17-frontend/static/media/arrow-up-icon.de1ec021.png"
+    "revision": "c0e58e147361a70ed636227186be55dc",
+    "url": "/project17-frontend/static/media/arrow-up-icon.c0e58e14.png"
   },
   {
-    "revision": "3ed4c393f162a3dd6f1d12e687927582",
-    "url": "/project17-frontend/static/media/contactsIcon.3ed4c393.png"
+    "revision": "b1b7b3fc0ea21e5925b50498c0c134cc",
+    "url": "/project17-frontend/static/media/contactsIcon.b1b7b3fc.png"
   },
   {
     "revision": "7659ef6b5f831fb54c98c05c4d2a8290",
@@ -76,7 +76,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/project17-frontend/static/media/pic8.a2130229.jpg"
   },
   {
-    "revision": "9048bd04c0685aa2020337dbce4f11f8",
-    "url": "/project17-frontend/static/media/timeTableIconWhite.9048bd04.png"
+    "revision": "da0d345937f20e0e50b1b7a10b1d319e",
+    "url": "/project17-frontend/static/media/timeTableIconWhite.da0d3459.png"
+  },
+  {
+    "revision": "82d23939f2b02d5435da9e718ea503ee",
+    "url": "/project17-frontend/static/media/wallet-icon.82d23939.png"
   }
 ]);

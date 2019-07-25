@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/project17-frontend/static/css/main.0e4fa569.chunk.css",
-    "main.js": "/project17-frontend/static/js/main.3a5df451.chunk.js",
-    "main.js.map": "/project17-frontend/static/js/main.3a5df451.chunk.js.map",
+    "main.js": "/project17-frontend/static/js/main.05c1f7cc.chunk.js",
+    "main.js.map": "/project17-frontend/static/js/main.05c1f7cc.chunk.js.map",
     "runtime~main.js": "/project17-frontend/static/js/runtime~main.d5cc3d3c.js",
     "runtime~main.js.map": "/project17-frontend/static/js/runtime~main.d5cc3d3c.js.map",
     "static/js/2.94936a73.chunk.js": "/project17-frontend/static/js/2.94936a73.chunk.js",
     "static/js/2.94936a73.chunk.js.map": "/project17-frontend/static/js/2.94936a73.chunk.js.map",
     "index.html": "/project17-frontend/index.html",
-    "precache-manifest.df3b6ae44e3071d33a0741324a66d6a0.js": "/project17-frontend/precache-manifest.df3b6ae44e3071d33a0741324a66d6a0.js",
+    "precache-manifest.79f92f559e24a10c0a2240e915eacd31.js": "/project17-frontend/precache-manifest.79f92f559e24a10c0a2240e915eacd31.js",
     "service-worker.js": "/project17-frontend/service-worker.js",
     "static/css/main.0e4fa569.chunk.css.map": "/project17-frontend/static/css/main.0e4fa569.chunk.css.map",
-    "static/media/arrow-up-icon.png": "/project17-frontend/static/media/arrow-up-icon.de1ec021.png",
-    "static/media/contactsIcon.png": "/project17-frontend/static/media/contactsIcon.3ed4c393.png",
+    "static/media/arrow-up-icon.png": "/project17-frontend/static/media/arrow-up-icon.c0e58e14.png",
+    "static/media/contactsIcon.png": "/project17-frontend/static/media/contactsIcon.b1b7b3fc.png",
     "static/media/icon.svg": "/project17-frontend/static/media/icon.7659ef6b.svg",
     "static/media/pic1.jpeg": "/project17-frontend/static/media/pic1.a1953109.jpeg",
     "static/media/pic1hover.jpg": "/project17-frontend/static/media/pic1hover.41b0fe1d.jpg",
@@ -25,6 +25,7 @@
     "static/media/pic6.jpg": "/project17-frontend/static/media/pic6.29a88087.jpg",
     "static/media/pic7.jpg": "/project17-frontend/static/media/pic7.15165d75.jpg",
     "static/media/pic8.jpg": "/project17-frontend/static/media/pic8.a2130229.jpg",
-    "static/media/timeTableIconWhite.png": "/project17-frontend/static/media/timeTableIconWhite.9048bd04.png"
+    "static/media/timeTableIconWhite.png": "/project17-frontend/static/media/timeTableIconWhite.da0d3459.png",
+    "static/media/wallet-icon.png": "/project17-frontend/static/media/wallet-icon.82d23939.png"
   }
 }
