@@ -2,7 +2,7 @@
   "name": "project17-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alex880727.github.io/project17-frontend",
+  "homepage": "http://studio17.duckdns.org/",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.13",

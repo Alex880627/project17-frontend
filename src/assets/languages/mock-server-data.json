@@ -53,6 +53,12 @@
       "hour": "17:00",
       "therapist": "Panka",
       "signed": "4/6"
+    },
+    {
+      "day": "thursday",
+      "hour": "15:00",
+      "therapist": "Panka",
+      "signed": "4/6"
     }
   ]
 }

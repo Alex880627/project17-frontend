@@ -16,7 +16,7 @@
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "details": "Sugár Szilvia is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#eb4335"
+        "color": "#b5ffd9"
       },
       {
         "name": "Csikós Panka",
@@ -24,7 +24,7 @@
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "details": "Semmelweis Egyetem Egészségtudományi Karán gyógytornász szakirány Minden korosztály: ovis tartás-, koordináció javítás, lúdtalptorna Gyermekkorban kialakult gerincferdülés (scoliosis) kezelése felnőtt gerinc problémák: kellemetlen derékfájástól - a súlyos gerincbántalmakig, sport sérülések rehabilitációja és visszatérés, funkcionális köredzés, trx, SMR henger időskori preventív torna, ízületi panaszok enyhítése, mobilitás és függetlenség megőrzése Egyéni és kis csoportos órák, mindenkire és minden apró mozdulatra fokozott figyelem egy barátságos, jó hangulatú torna közben Közösen megfogalmazott célok, közösen végrehajtva, soksok munkával és újabb és újabb sikerélményekkel.",
-        "color": "#506b96"
+        "color": "#ade2ff"
       },
       {
         "name": "Erasimus Zsuzsa",
@@ -45,7 +45,7 @@
       "city": "Budapest 1055",
       "ringbell": "Kapucsengő",
       "ringbell number": "17",
-      "email": "E-mail: studio17gyogytorna@gmail.com"
+      "email": "studio17gyogytorna@gmail.com"
     }
   },
   "group sessions": {

@@ -5,6 +5,7 @@ import NavigationLinksComp from "./navigation-links-comp";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import HamburgerMenu from "./hamburger-icon-comp";
+import Loader from "./loader-component";
 
 const NavBarComp = props => {
   console.log(props);
@@ -12,6 +13,7 @@ const NavBarComp = props => {
   let navbar = "HU";
   props.language === "HU" ? (navbar = hu.navbar) : (navbar = en.navbar);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [isLoading, setIsloading] = useState(false);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setInnerWidth(window.innerWidth);
@@ -34,11 +36,13 @@ const NavBarComp = props => {
       />
       <div />
       {innerWidth > 768 ? <NavigationLinksComp navbar={navbar} /> : null}
-
+      {isLoading===true? <Loader />:null}
       <UpNavButton />
       <LanguagePickerButton
         changeLanguageToEN={props.changeLanguageToEN}
         changeLanguageToHU={props.changeLanguageToHU}
+        setIsloading={setIsloading}
+        isLoading={isLoading}
         language={props.language}
       />
     </nav>

@@ -53,26 +53,29 @@
    background-color: white;
    color: rgb(255, 255, 255);
    font-weight: bold;
-   border-radius: 0.313em;
    text-align: center;
  }
 
  table {
+   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
    z-index: 0;
    max-width: 40.625em;
    margin-bottom: 5%;
    width: 95%;
+   border-collapse: collapse;
  }
 
  th {
   padding: 1.563em 0.313em 1.563em 0.313em;
   background-color:  $mainGreencolor;
-  color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
   border: 1px solid rgb(100, 100, 100);
  }
 
  tr, td {
    width: 15%;
+    border: 1px solid rgb(100, 100, 100);
+    color: black;
  }
 
  tr, td > h3 {
@@ -82,19 +85,24 @@ tr, td > p {
   font-weight: 100;
 }
 
+
  tr > td:first-child {
    text-align: center;
    color: rgb(0, 0, 0);
-   background-color: $mainGreencolor;
+   background-color: rgb(255, 255, 255);
    border: 1px solid rgb(100, 100, 100);
  }
+
+ tr:nth-child(even) > td  {
+  background-color: rgb(194, 194, 194);
+}
 
  @media only screen and (max-width: 768px) {
   table {
     max-width: 95%;
   }
   td, th {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .group-sessions-description {
     max-width: 95%;

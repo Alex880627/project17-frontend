@@ -44,6 +44,7 @@
   align-items: center;
   z-index: 5;
   max-width: 31.25em;
+  height: auto;
   background-color: #eb4335;
   position: absolute;
   margin-left: auto;
@@ -51,7 +52,7 @@
   left: 0;
   right: 0;
   p {
-    white-space: pre-wrap;
+    white-space: pre;
   }
 }
 

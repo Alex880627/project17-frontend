@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import pic4 from "../pic/pic4.jpg";
-import pic5 from "../pic/pic5.jpg";
-import pic6 from "../pic/pic6.jpg";
-import pic7 from "../pic/pic7.jpg";
-import pic8 from "../pic/pic8.jpg";
+import pic4 from "../pic/pic4.webp";
+import pic5 from "../pic/pic5.webp";
+import pic6 from "../pic/pic6.webp";
+import pic7 from "../pic/pic7.webp";
+import pic8 from "../pic/pic8.webp";
 
 class App extends Component {
   constructor(props) {
