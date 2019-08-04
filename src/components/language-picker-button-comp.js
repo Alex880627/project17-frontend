@@ -1,5 +1,5 @@
-import huFlag from "../pic/hu-flag.webp";
-import enFlag from "../pic/en-flag.webp";
+import huFlag from "../pic/hu-flag.jpg";
+import enFlag from "../pic/en-flag.jpg";
 import React, { useState, useEffect } from "react";
 
 const LanguagePickerButton = props => {

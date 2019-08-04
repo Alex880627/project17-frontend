@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import upButton from "../pic/icons/arrow-up-icon.webp";
+import upButton from "../pic/icons/arrow-up-icon.jpg";
 
 const UpNavButton = () => {
   const [visibility, setVisibility] = useState("hidden");

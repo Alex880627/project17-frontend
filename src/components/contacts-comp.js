@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleMapConfigured from "./google-maps-comp-config";
-import contactsIcon from "../pic/contacts/contactsIcon.webp";
+import contactsIcon from "../pic/contacts/contactsIcon.jpg";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
-import pricesIcon from "../pic/icons/wallet-icon.webp";
+import pricesIcon from "../pic/icons/wallet-icon.jpg";
 
 const PricesComp = props => {
   let prices = "HU";
