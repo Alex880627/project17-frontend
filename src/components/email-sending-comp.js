@@ -10,7 +10,7 @@ const EmailSendingComp = ({ email, language }) => {
     e.preventDefault();
     sendInfo(
       { email: userEmail, name: userName, message: userMessage },
-      "https://studio17.duckdns.org/api"
+      "https://studio17.duckdns.org/api/uzenetkuldes"
     ).then(json =>
       setMessage(language === "HU" ? json.messageHU : json.messageEN)
     );
