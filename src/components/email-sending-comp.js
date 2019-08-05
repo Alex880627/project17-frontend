@@ -12,7 +12,7 @@ const EmailSendingComp = ({ email, language }) => {
     setIsLoading(true);
     e.preventDefault();
     sendInfo(
-      { email: userEmail, name: userName, message: userMessage },
+      { email: userEmail.trim(), name: userName.trim(), message: userMessage.trim() },
       "https://studio17.duckdns.org/api/uzenetkuldes"
     )
       .then(json => {

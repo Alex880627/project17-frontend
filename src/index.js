@@ -7,6 +7,7 @@ import GroupSessionsContainer from "./containers/group-sessions-container";
 import TherapistListContainer from "./containers/therapist-list-container";
 import configureStore from "./store/configure-store";
 import PricesContainer from "./containers/prices-container";
+import TreatementsListContainer from "./containers/treatements-list-container";
 import * as serviceWorker from "./serviceWorker";
 import ContactsContainer from "./containers/contacts-container";
 import FooterContainer from "./containers/footer-container";
@@ -18,6 +19,7 @@ ReactDOM.render(
     <LandinPage />
     <Galery />
     <TherapistListContainer />
+    <TreatementsListContainer />
     <PricesContainer />
     <GroupSessionsContainer />
     <ContactsContainer />
