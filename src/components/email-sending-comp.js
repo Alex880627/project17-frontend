@@ -11,9 +11,13 @@ const EmailSendingComp = ({ email, language }) => {
     sendInfo(
       { email: userEmail, name: userName, message: userMessage },
       "https://studio17.duckdns.org/api/uzenetkuldes"
-    ).then(json =>
-      setMessage(language === "HU" ? json.messageHU : json.messageEN)
-    );
+    )
+      .then(json =>
+        setMessage(language === "HU" ? json.messageHU : json.messageEN)
+      )
+      .catch(error =>
+        setMessage(language === "HU" ? error.messageHU : error.messageEN)
+      );
   };
   const handleChange = e => {
     return e.target.value;
