@@ -1288,10 +1288,16 @@ tr:nth-child(even) > td {
 
 .footer-wrapper .pre-footer .email-section h4 {
   display: block;
-  color: white;
+  color: #002c3d;
+  text-shadow: 0px 0px 1px #080075;
   opacity: 0.8;
   text-align: center;
   max-width: 15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .footer-wrapper .footer {
