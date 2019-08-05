@@ -7,7 +7,7 @@ const sendInfo = (input, url) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(input)
-    }).then(data=>{console.log(data); return res(data.json())}).catch(err=> rej(err));
+    }).then(data=>{return res(data.json())}).catch(err=> rej(err));
   })
 };
 
