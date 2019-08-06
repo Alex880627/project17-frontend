@@ -41,14 +41,13 @@ const GroupSessionsContainer = props => {
   };
   return (
     <>
-      <div className="group-sessions-wrapper" id="group-sessions">
+      <div className="transperent-wrapper" id="group-sessions">
         <div className="blur-wrapper" />
-        <div className="group-sessions-heading">
+        <div className="heading">
           <h3>{groupSessions["group sessions title"]}</h3>
           <img src={timeTableIconWhite} alt="time table icon"/>
         </div>
           <div className="group-sessions-description">
-          
           <p>{groupSessions.description}</p>
           <h4>{groupSessions.interval}</h4>
           </div>
@@ -80,7 +79,6 @@ const GroupSessionsContainer = props => {
                         >
                           {" "}
                           <h3>{filteredTableData[0].therapist}</h3>
-                          <p>{filteredTableData[0].signed}</p>
                         </td>
                       ) : (
                         <td key={`${Math.random()}`}/> // eslint-disable-line no-use-before-define

@@ -16,12 +16,12 @@ const PricesComp = props => {
       if (
         (prevContainer !== "" &&
           prevContainer !== container &&
-          container.className === "treatements-list") ||
+          container.className === "treatments-list") ||
         (container.parentElement.id === "root" && prevContainer !== "")
       ) {
         prevContainer.classList.remove("onhover");
       }
-      if (container.className === "treatements-list") {
+      if (container.className === "treatments-list") {
         if (!container.classList.contains("onhover")) {
           container.classList.add("onhover");
         }
@@ -43,10 +43,10 @@ const PricesComp = props => {
         <h3>{prices["prices title"]}</h3>
         <img src={pricesIcon} alt="price icon" />
       </div>
-      <div className="treatements-list-wrapper">
+      <div className="treatments-list-wrapper">
         {prices.treatments.map(element => {
           return (
-            <div className="treatements-list" key={element.name}>
+            <div className="treatments-list" key={element.name}>
               <h3>{element.name}</h3>
               <p>{element.price}</p>
               <p>{`/${prices.occasion} (${element.duration})`}</p>

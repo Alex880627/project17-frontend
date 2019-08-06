@@ -24,14 +24,14 @@
   margin-bottom: 1.875em;
 }
 
-.treatements-list-wrapper {
+.treatments-list-wrapper {
   padding: 1.25em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.treatements-list {
+.treatments-list {
   width: 45%;
   color: white;
   padding: 0.625em;
@@ -64,13 +64,13 @@
   transform: scale(1.05);
 }
 
-.treatements-list > p:nth-child(4) {
+.treatments-list > p:nth-child(4) {
   padding: 0.625em;
   text-align: left;
 }
 
 @media only screen and (max-width: 768px) {
-  .treatements-list {
+  .treatments-list {
     width: 90%;
   }
 }

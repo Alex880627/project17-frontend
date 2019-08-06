@@ -1,13 +1,14 @@
 import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
+import NoMatchComponent from "./components/no-match-component";
 import Galery from "./components/galery-comp";
 import LandinPage from "./components/landing-page";
 import GroupSessionsContainer from "./containers/group-sessions-container";
 import TherapistListContainer from "./containers/therapist-list-container";
 import configureStore from "./store/configure-store";
 import PricesContainer from "./containers/prices-container";
-import TreatementsListContainer from "./containers/treatements-list-container";
+import TreatmentsListContainer from "./containers/treatments-list-container";
 import * as serviceWorker from "./serviceWorker";
 import ContactsContainer from "./containers/contacts-container";
 import FooterContainer from "./containers/footer-container";
@@ -19,7 +20,7 @@ ReactDOM.render(
     <LandinPage />
     <Galery />
     <TherapistListContainer />
-    <TreatementsListContainer />
+    <TreatmentsListContainer />
     <PricesContainer />
     <GroupSessionsContainer />
     <ContactsContainer />

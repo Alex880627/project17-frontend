@@ -14,7 +14,8 @@ class App extends Component {
       initialPicPosition: 0,
       picPosition: 0,
       slideShowDirectionVar: 1,
-      innerWidth: window.innerWidth
+      innerWidth: window.innerWidth,
+      scrollHeight: window.pageYOffset
     };
     this.changePicByClick = this.changePicByClick.bind(this);
     this.autoChangePic = this.autoChangePic.bind(this);
@@ -29,6 +30,9 @@ class App extends Component {
     }, 5000);
     window.addEventListener("resize", () => {
       this.setState({ innerWidth: window.innerWidth });
+    });
+    window.addEventListener("scroll", () => {
+      this.setState({ scrollHeight: window.pageYOffset });
     });
   }
   calculateScreen() {
@@ -45,6 +49,9 @@ class App extends Component {
     clearInterval(this.interval);
     window.removeEventListener("resize", () => {
       this.setState({ innerWidth: this.state.innerWidth });
+    });
+    window.removeEventListener("scroll", () => {
+      this.setState({ scrollHeight: window.pageOffset });
     });
   }
   updateStateWithDirection(slideShowDirectionVar, currentPic) {
@@ -156,7 +163,7 @@ class App extends Component {
           <div onClick={this.changePicByArrows} className="arrow right">
             <div />
           </div> */}
-          <div className="controll-buttons-wrapper">
+          <div className="controll-buttons-wrapper" style={this.state.scrollHeight>200? {visibility:"hidden"}:{visibility:"visible"}}>
             {pictures.map((picture, index) => {
               return (
                 <div

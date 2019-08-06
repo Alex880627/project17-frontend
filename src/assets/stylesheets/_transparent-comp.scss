@@ -1,0 +1,41 @@
+.transperent-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading > h3 {
+  z-index: 0;
+  color: white;
+  text-align: center;
+  font-size: 1.875em;
+}
+.heading > img {
+  height: auto;
+  width: 5em;
+  margin-bottom: 1.875em;
+  z-index: 0;
+}
+
+.blur-wrapper {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  opacity: 0.8;
+ }
