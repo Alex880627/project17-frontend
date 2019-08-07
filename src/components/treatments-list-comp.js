@@ -73,7 +73,7 @@ const TreatementDropdown = ({ element }) => {
       <div
         className="arrow-down"
         style={
-          {hover: hover}
+          {opacity: hover, transition: "opacity 0.3s"}
         }
         /*  style={
           arrowTurn === false
