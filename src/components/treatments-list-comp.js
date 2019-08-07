@@ -1,36 +1,74 @@
-import React, { useState, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
 
 const TreatementDropdown = ({ element }) => {
+  let prevContainer = "";
   const treatmentRef = useRef(null);
-  const arrowRef = useRef(null);
-  const [visiblity, setVisiblity] = useState(true);
+  const changeArrow = (e) => {
+   const child = e.target.childNodes;
+   console.log(child);
+   
+  }
   const changeHeight = () => {
     const currentElement = treatmentRef.current;
-    currentElement.style.height === "3em"
-      ? (currentElement.style.height = `${(currentElement.scrollHeight / 100) *
-          6}em`)
-      : (currentElement.style.height = "3em");
+    if(currentElement.style.height === "3em"){
+      currentElement.style.height = `${(currentElement.scrollHeight / 100) * 6}em`;
+    }else{
+      currentElement.style.height = "3em";
+    }
     currentElement.parentNode.childNodes.forEach(element => {
+      element.childNodes[0].style.transform = "scaleY(1)";
       return element !== treatmentRef.current
         ? (element.style.height = "3em")
         : null;
     });
-    currentElement.style.height==="3em"? setVisiblity("4em"):setVisiblity("3em");
   };
+  const hoverOnScroll = () => {
+    if (window.innerWidth < 769) {
+      const container = document.elementFromPoint(
+        window.innerWidth / 2,
+        (window.innerHeight / 3) * 2
+      );
+      if (
+        (prevContainer !== "" &&
+          prevContainer !== container &&
+          container.parentElement.className === "treatment") ||
+        (container.parentElement.id === "root" && prevContainer !== "")
+      ) {
+        prevContainer.parentElement.classList.remove("treatments-mobile-view");
+      }
+      if (container.parentElement.className === "treatment") {
+        if (!container.parentElement.classList.contains("treatments-mobile-view")) {
+          container.parentElement.classList.add("treatments-mobile-view");
+        }
+        prevContainer = container;
+      }
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", hoverOnScroll);
+    return () => {
+      window.removeEventListener("scroll", hoverOnScroll);
+    };
+    // eslint-disable-next-line
+  }, []);
   return (
     <div
       className="treatment"
       onClick={changeHeight}
+      onMouseUp={changeArrow}
       style={{ height: "3em", transition: "height 0.5s" }}
       ref={treatmentRef}
     >
       <div
-        class="arrow-down"
-        ref={arrowRef}
-        style={visiblity === "3em" ? { opacity: "0" } : null}
+        className="arrow-down"
+       /*  style={
+          arrowTurn === false
+            ? { transform: "scaleY(-1)", transition: "transform 0.3s" }
+            : { transform: "scaleY(1)", transition: "transform 0.3s" }
+        } */
       />
       <h3>{element.title}</h3>
       <p>{element.description}</p>
@@ -52,7 +90,7 @@ const TreatmentsListComp = props => {
       </div>
       <div className="treatments-wrapper">
         {treatments["treatments list"].map(element => {
-          return <TreatementDropdown element={element} />;
+          return <TreatementDropdown key={element.title} element={element} />;
         })}
       </div>
     </div>

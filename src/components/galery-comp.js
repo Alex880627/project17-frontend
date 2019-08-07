@@ -163,7 +163,7 @@ class App extends Component {
           <div onClick={this.changePicByArrows} className="arrow right">
             <div />
           </div> */}
-          <div className="controll-buttons-wrapper" style={this.state.scrollHeight>200? {visibility:"hidden"}:{visibility:"visible"}}>
+         <div className="controll-buttons-wrapper" style={this.state.scrollHeight>200 || window.innerWidth<769? {visibility:"hidden"}:{visibility:"visible"}}>
             {pictures.map((picture, index) => {
               return (
                 <div
