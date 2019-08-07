@@ -73,7 +73,7 @@ const TreatementDropdown = ({ element }) => {
       <div
         className="arrow-down"
         style={
-          {opacity: hover, transition: "opacity 0.3s"}
+          window.innerWidth>768? {opacity: hover, transition: "opacity 0.3s"}:null
         }
         /*  style={
           arrowTurn === false
