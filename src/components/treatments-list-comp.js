@@ -1,21 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
 
 const TreatementDropdown = ({ element }) => {
+  const [hover, setHover] = useState(0);
   let prevContainer = "";
   const treatmentRef = useRef(null);
-  const changeArrow = (e) => {
-   const child = e.target.childNodes;
-   console.log(child);
-   
-  }
   const changeHeight = () => {
     const currentElement = treatmentRef.current;
-    if(currentElement.style.height === "3em"){
-      currentElement.style.height = `${(currentElement.scrollHeight / 100) * 6}em`;
-    }else{
+    if (currentElement.style.height === "3em") {
+      currentElement.style.height = `${(currentElement.scrollHeight / 100) *
+        6}em`;
+    } else {
       currentElement.style.height = "3em";
     }
     currentElement.parentNode.childNodes.forEach(element => {
@@ -40,7 +37,9 @@ const TreatementDropdown = ({ element }) => {
         prevContainer.parentElement.classList.remove("treatments-mobile-view");
       }
       if (container.parentElement.className === "treatment") {
-        if (!container.parentElement.classList.contains("treatments-mobile-view")) {
+        if (
+          !container.parentElement.classList.contains("treatments-mobile-view")
+        ) {
           container.parentElement.classList.add("treatments-mobile-view");
         }
         prevContainer = container;
@@ -58,13 +57,25 @@ const TreatementDropdown = ({ element }) => {
     <div
       className="treatment"
       onClick={changeHeight}
-      onMouseUp={changeArrow}
       style={{ height: "3em", transition: "height 0.5s" }}
       ref={treatmentRef}
+      onMouseEnter={
+       ()=>{
+         setHover(1)
+       }
+      }
+      onMouseLeave={
+        ()=>{
+          setHover(0)
+        }
+      }
     >
       <div
         className="arrow-down"
-       /*  style={
+        style={
+          {hover: hover}
+        }
+        /*  style={
           arrowTurn === false
             ? { transform: "scaleY(-1)", transition: "transform 0.3s" }
             : { transform: "scaleY(1)", transition: "transform 0.3s" }

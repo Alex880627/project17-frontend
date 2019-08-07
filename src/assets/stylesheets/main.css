@@ -1587,7 +1587,7 @@ tr:nth-child(even) > td {
 }
 
 .treatment:hover > .arrow-down {
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -1632,6 +1632,9 @@ tr:nth-child(even) > td {
 @media only screen and (max-width: 768px) {
   .treatment {
     width: 90%;
+  }
+  .treatment p {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=main.css.map */
