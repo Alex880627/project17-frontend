@@ -4,6 +4,7 @@ import en from "../assets/languages/lang-en.json";
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
 
 const TreatementDropdown = ({ element }) => {
+  const [border, setBorder] = useState('')
   const [hover, setHover] = useState(0);
   let prevContainer = "";
   const treatmentRef = useRef(null);
@@ -57,16 +58,18 @@ const TreatementDropdown = ({ element }) => {
     <div
       className="treatment"
       onClick={changeHeight}
-      style={{ height: "3em", transition: "height 0.5s" }}
+      style={{ height: "3em", transition: "all 0.3s", border: border }}
       ref={treatmentRef}
       onMouseEnter={
        ()=>{
-         setHover(1)
+         setHover(1);
+         setBorder('1px solid white');
        }
       }
       onMouseLeave={
         ()=>{
-          setHover(0)
+          setHover(0);
+          setBorder('');
         }
       }
     >

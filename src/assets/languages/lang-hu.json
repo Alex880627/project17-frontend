@@ -132,5 +132,14 @@
         "description": "Egy komolyabb sérülés, egy műtét, vagy a hosszabb ideje jelen lévő fájdalmak és problémák jelentős mértékben befolyásolják az életünk és a testünk minőségét. Ilyenkor sérülnek a velünk született mozgásminták is, melyek helyreállítása alapvető fontosságú. A rehabilitációhoz minden ilyen esetben funkcionális, egyénre szabott gyógytorna szükséges.A személyre szabott kezelés előnye, hogy a magánóra keretei között a gyógytornász fókuszált figyelmet fordíthat a betegre. A fennálló mozgásszervi betegségek gyógyításának illetve megelőzésének leghatékonyabb formája minden esetben az egyéni gyógytorna. Ülő- vagy megterhelő fizikai munka esetén, alak- és egészségmegőrzési célból, az ízületek és izmok mozgékonyságának megőrzésére, esetleg bármilyen későbbi probléma megelőzésére szintén javasolt egyéni kezelést foglalni."
       }
     ]
+  },
+  "privacy policy": {
+     "sentence": "Az oldalon a felhasználóélmény javítása érdekében sütiket használunk. Az oldal használatával elfogadod a",
+     "link": "Felhasználási Feltételeinket",
+     "button": "Rendben"
+  },
+  "404": {
+    "title": "Az oldal nem található",
+     "button": "Vissza a főoldalra"
   }
 }
