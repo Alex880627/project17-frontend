@@ -20,7 +20,7 @@
   font-size: 1.875em;
 }
 .therapist-heading > img {
-  height: 5em;
+  max-height: 5em;
   width: auto;
   margin-bottom: 1.875em;
 }
@@ -53,7 +53,9 @@
   pointer-events: none;
   button {
     visibility: hidden;
+    font-weight: bold;
     color: white;
+    width: 100%;
     margin-bottom: 7%;
     padding:0.438em;
     font-size: 0.813em;
