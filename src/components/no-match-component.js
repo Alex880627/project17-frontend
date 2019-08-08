@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const NoMatchComponent = () => (
-  <form action="/">
-    <button type="submit">Go Home</button>
-  </form>
+  <div className="nomatch-comp">
+    <form action="/">
+      <h1>{"404"}</h1>
+      <button type="submit">{"Vissza a főoldalra"}</button>
+    </form>
+  </div>
 );
 
 export default NoMatchComponent;

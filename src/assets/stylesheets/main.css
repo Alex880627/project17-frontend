@@ -835,7 +835,6 @@ body {
   -webkit-box-shadow: 0 0 0.938em 1px #363636;
           box-shadow: 0 0 0.938em 1px #363636;
   line-height: 0px;
-  border-radius: 0.188em;
   color: white;
   position: absolute;
   display: -webkit-box;
@@ -1052,34 +1051,34 @@ tr:nth-child(even) > td {
 
 .treatments-list:hover {
   background-color: #EB4335;
-  -webkit-box-shadow: 0px 0px 1.125em 0.313em black;
-          box-shadow: 0px 0px 1.125em 0.313em black;
   background: -webkit-gradient(linear, left top, left bottom, from(#EB4335), color-stop(30%, #333333));
   background: linear-gradient(180deg, #EB4335 0%, #333333 30%);
+  -webkit-box-shadow: 0px 0px 8px 1px black;
+          box-shadow: 0px 0px 8px 1px black;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .onhover {
   background-color: #EB4335;
   background: -webkit-gradient(linear, left top, left bottom, from(#EB4335), color-stop(30%, #333333));
   background: linear-gradient(180deg, #EB4335 0%, #333333 30%);
-  -webkit-box-shadow: 0px 0px 1.125em 0.313em black;
-          box-shadow: 0px 0px 1.125em 0.313em black;
+  -webkit-box-shadow: 0px 0px 8px 1px black;
+          box-shadow: 0px 0px 8px 1px black;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .treatments-list > p:nth-child(4) {
@@ -1673,6 +1672,7 @@ tr:nth-child(even) > td {
 .privacy-policy button {
   margin: 5px;
   font-size: 12px;
+  opacity: 0.8;
   border: none;
   border-radius: 3px;
   background-color: #EB4335;
@@ -1680,8 +1680,18 @@ tr:nth-child(even) > td {
   text-shadow: 0px 0px 1px black;
 }
 
+.privacy-policy button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
 .privacy-policy a {
   color: #7171ff;
+  text-decoration: none;
+}
+
+.privacy-policy a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {

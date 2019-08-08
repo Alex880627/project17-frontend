@@ -10,7 +10,7 @@ const PrivacyPolicyComp = props => {
     ? (policy = hu["privacy policy"])
     : (policy = en["privacy policy"]);
   return (
-      show? <div className="privacy-policy">
+      <div className="privacy-policy" style={!show? {bottom: "-20%", transition: 'bottom 0.7s'}:null}>
       <p>
         {`${policy.sentence} `}
         <a href={privacyPdf}>{`${policy.link}`}</a>
@@ -19,7 +19,7 @@ const PrivacyPolicyComp = props => {
           setShow(false);
         }}>{policy.button}</button>
       </p>
-    </div>:null
+    </div>
   );
 };
 

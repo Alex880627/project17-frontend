@@ -1,31 +1,24 @@
 import React from "react";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
+import App from "./app";
 import NoMatchComponent from "./components/no-match-component";
-import Galery from "./components/galery-comp";
-import LandinPage from "./components/landing-page";
-import GroupSessionsContainer from "./containers/group-sessions-container";
-import TherapistListContainer from "./containers/therapist-list-container";
-import configureStore from "./store/configure-store";
-import PricesContainer from "./containers/prices-container";
-import TreatmentsListContainer from "./containers/treatments-list-container";
-import * as serviceWorker from "./serviceWorker";
-import ContactsContainer from "./containers/contacts-container";
-import FooterContainer from "./containers/footer-container";
+
 import "./assets/stylesheets/main.css";
+import * as serviceWorker from "./serviceWorker";
+import configureStore from "./store/configure-store";
 
 const store = configureStore();
 ReactDOM.render(
-  <Provider store={store}>
-    <LandinPage />
-    <Galery />
-    <TherapistListContainer />
-    <TreatmentsListContainer />
-    <PricesContainer />
-    <GroupSessionsContainer />
-    <ContactsContainer />
-    <FooterContainer />
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="*" component={NoMatchComponent} />
+      </Switch>
+    </Provider>
+  </Router>,
   document.getElementById("root")
 );
 
