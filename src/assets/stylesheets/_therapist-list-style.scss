@@ -20,8 +20,8 @@
   font-size: 1.875em;
 }
 .therapist-heading > img {
-  max-height: 5em;
-  width: auto;
+  max-width: 5em;
+  height: auto;
   margin-bottom: 1.875em;
 }
 
@@ -92,9 +92,9 @@
 }
 
 .threapist-mobile-view {
-  box-shadow: 0px 0px 1.125em 0.313em black;
+  border: 1px solid rgb(66, 66, 66);
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.05);
+  transform: scale(1.02);
   .therapist-info button {
     visibility: visible;
     transition: visibility 0.5s;
