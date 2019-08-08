@@ -27,15 +27,11 @@
     text-shadow: 0px 0px 1px black;
     &:hover {
       cursor: pointer;
-      opacity: 1;
     }
   }
   a {
     color: rgb(113, 113, 255);
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
   }
   
 }

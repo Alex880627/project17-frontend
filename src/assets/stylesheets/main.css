@@ -1431,7 +1431,7 @@ tr:nth-child(even) > td {
 @media only screen and (max-width: 768px) {
   .side-bar-wrapper {
     position: fixed;
-    top: 6em;
+    top: 4.5em;
   }
 }
 
@@ -1682,16 +1682,11 @@ tr:nth-child(even) > td {
 
 .privacy-policy button:hover {
   cursor: pointer;
-  opacity: 1;
 }
 
 .privacy-policy a {
   color: #7171ff;
   text-decoration: none;
-}
-
-.privacy-policy a:hover {
-  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
