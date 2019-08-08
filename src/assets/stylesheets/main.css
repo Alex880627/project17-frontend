@@ -187,8 +187,6 @@ html {
 
 .therapist-details-container ::-webkit-scrollbar {
   width: 0px;
-  background: transparent;
-  /* make scrollbar transparent */
 }
 
 .therapist-details {
@@ -346,6 +344,10 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .therapist-details {
+    margin: 5px;
+    max-width: 600px;
   }
 }
 
@@ -1672,7 +1674,7 @@ tr:nth-child(even) > td {
 .privacy-policy button {
   margin: 5px;
   font-size: 12px;
-  opacity: 0.8;
+  opacity: 1;
   border: none;
   border-radius: 3px;
   background-color: #EB4335;

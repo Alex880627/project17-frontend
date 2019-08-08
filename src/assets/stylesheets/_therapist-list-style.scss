@@ -115,7 +115,6 @@
 .therapist-details-container {
   ::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
 }
   display: flex;
   flex-grow: 1;
@@ -226,5 +225,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .therapist-details {
+    margin: 5px;
+    max-width: 600px;
   }
 }
