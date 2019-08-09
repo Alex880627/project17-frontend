@@ -58,7 +58,7 @@ const TreatementDropdown = ({ element }) => {
     <div
       className="treatment"
       onClick={changeHeight}
-      style={{ height: "3em", transition: "all 0.3s", border: border }}
+      style={{ height: "3em", transition: "all 0.3s", border: border, cursor: "pointer" }}
       ref={treatmentRef}
       onMouseEnter={
        ()=>{
@@ -76,7 +76,7 @@ const TreatementDropdown = ({ element }) => {
       <div
         className="arrow-down"
         style={
-          window.innerWidth>768? {opacity: hover, transition: "opacity 0.3s"}:null
+          window.innerWidth>768? {opacity: hover, transition: "opacity 0.3s", cursor: "pointer"}:null
         }
         /*  style={
           arrowTurn === false

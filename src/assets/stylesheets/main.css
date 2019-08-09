@@ -1587,10 +1587,6 @@ tr:nth-child(even) > td {
   text-align: justify;
 }
 
-.treatment:hover {
-  cursor: pointer;
-}
-
 .treatments-wrapper {
   position: relative;
   width: 100%;
