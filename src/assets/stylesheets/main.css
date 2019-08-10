@@ -5,6 +5,7 @@ html {
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
 .therapist-wrapper {
@@ -391,7 +392,6 @@ html {
   color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .main-navbar > div > a:last-child {
@@ -592,7 +592,6 @@ html {
 body {
   overflow-x: hidden;
   margin: 0;
-  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1413,7 +1412,6 @@ tr:nth-child(even) > td {
   padding: 1.25em;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: none;
-  text-transform: uppercase;
   text-decoration: none;
   color: #272a2f;
 }

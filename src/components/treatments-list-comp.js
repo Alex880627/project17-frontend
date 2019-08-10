@@ -27,7 +27,7 @@ const TreatementDropdown = ({ element }) => {
     if (window.innerWidth < 769) {
       const container = document.elementFromPoint(
         window.innerWidth / 2,
-        (window.innerHeight / 3) * 2
+        (window.innerHeight / 3)
       );
       if (
         (prevContainer !== "" &&
