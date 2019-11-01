@@ -8,6 +8,7 @@ const NavigationLinksComp = ({navbar}) => {
       <a href="#prices">{navbar.prices}</a>
       <a href="#group-sessions">{navbar["group sessions"]}</a>
       <a href="#contacts">{navbar.contacts}</a>
+      <a href="#contacts" className="writeForUs">{navbar.contactUs}</a>
     </div>
   );
 };

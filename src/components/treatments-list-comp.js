@@ -4,17 +4,19 @@ import en from "../assets/languages/lang-en.json";
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
 
 const TreatementDropdown = ({ element }) => {
-  const [border, setBorder] = useState('')
   const [hover, setHover] = useState(0);
+  const [open, setOpen] = useState(false);
   let prevContainer = "";
   const treatmentRef = useRef(null);
+  const currentElement = treatmentRef.current;
   const changeHeight = () => {
-    const currentElement = treatmentRef.current;
     if (currentElement.style.height === "3em") {
+      open ? setOpen(false) : setOpen(true);
       currentElement.style.height = `${(currentElement.scrollHeight / 100) *
         6}em`;
     } else {
       currentElement.style.height = "3em";
+      setOpen(false);
     }
     currentElement.parentNode.childNodes.forEach(element => {
       element.childNodes[0].style.transform = "scaleY(1)";
@@ -27,7 +29,7 @@ const TreatementDropdown = ({ element }) => {
     if (window.innerWidth < 769) {
       const container = document.elementFromPoint(
         window.innerWidth / 2,
-        (window.innerHeight / 3)
+        window.innerHeight / 3
       );
       if (
         (prevContainer !== "" &&
@@ -54,35 +56,39 @@ const TreatementDropdown = ({ element }) => {
     };
     // eslint-disable-next-line
   }, []);
+  const mounted = useRef();
+  useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+    } else {
+      currentElement.style.height === "3em"? setOpen(false):setOpen(true)
+    }
+  });
   return (
     <div
       className="treatment"
       onClick={changeHeight}
-      style={{ height: "3em", transition: "all 0.3s", border: border, cursor: "pointer" }}
+      style={{
+        height: "3em",
+        transition: "all 0.3s",
+        cursor: "pointer"
+      }}
       ref={treatmentRef}
-      onMouseEnter={
-       ()=>{
-         setHover(1);
-         setBorder('1px solid white');
-       }
-      }
-      onMouseLeave={
-        ()=>{
-          setHover(0);
-          setBorder('');
-        }
-      }
+      onMouseEnter={() => {
+        setHover(1);
+      }}
+      onMouseLeave={() => {
+        setHover(0);
+      }}
     >
       <div
         className="arrow-down"
+        style={window.innerWidth > 768 ? { cursor: "pointer" } : null}
         style={
-          window.innerWidth>768? {opacity: hover, transition: "opacity 0.3s", cursor: "pointer"}:null
-        }
-        /*  style={
-          arrowTurn === false
+          open === true
             ? { transform: "scaleY(-1)", transition: "transform 0.3s" }
             : { transform: "scaleY(1)", transition: "transform 0.3s" }
-        } */
+        }
       />
       <h3>{element.title}</h3>
       <p>{element.description}</p>
