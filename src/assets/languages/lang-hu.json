@@ -95,9 +95,9 @@
     "copyright": "Minden jog fenntratva!",
     "email": {
       "email header": "Írj nekünk e-mailt!",
-      "email input": "Adja meg e-mail címét",
-      "name input": "Adja meg teljes nevét",
-      "message": "Üzenete...",
+      "email input": "Add meg az e-mail címed",
+      "name input": "Add meg a teljes neved",
+      "message": "Üzeneted...",
       "send": "Küldés"
     }
   },

@@ -6,78 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .pre-footer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    div {
-      display: flex;
-      flex-direction: column;
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-    .email-section {
-      margin-top: 50px;
-      h3 {
-        opacity: 0.8;
-        color: white;
-        text-align: center;
-      }
-      input,
-      textarea,
-      button {
-        margin: 0.313em;
-        border-radius: 0.188em;
-        box-shadow: 0px 0px 0.25em 0.125em $mainGreencolor;
-        background-color: rgb(58, 58, 58);
-        color: white;
-        border: 1px transparent;
-        outline: none;
-        resize: vertical;
-      }
-      input,
-      textarea {
-        &:focus {
-          background-color: rgb(90, 90, 90);
-          box-shadow: 0px 0px 0.188em 1px rgb(0, 0, 0);
-        }
-      }
-      input {
-        height: 1.25em;
-      }
-      input::placeholder {
-        color: white;
-        opacity: 0.8;
-      }
-      textarea::placeholder {
-        color: white;
-        opacity: 0.8;
-      }
-      button {
-        background-color: #eb4335;
-        font-weight: bold;
-        color: rgba(255, 255, 255, 0.9);
-        &:active {
-          background-color: #ff9389;
-          color: black;
-        }
-      }
-      h4 {
-        display: block;
-        color: rgb(251, 255, 0);
-        text-shadow: 0px 0px  1px rgb(8, 0, 117);
-        opacity: 0.8;
-        text-align: center;
-        max-width: 15em;
-        display: flex;
-        align-self: center;
-      }
-    }
-  }
   .footer {
     display: flex;
     justify-content: center;
@@ -100,24 +28,7 @@
   }
 }
 
-.footer-wrapper {
-  .navigation {
-    margin-top: 50px;
-    a {
-      color: white;
-      opacity: 0.8;
-      font-size: 1.25em;
-      text-decoration: none;
-      margin: 0.625em;
-      font-weight: bold;
-      opacity: 0.8;
-      &:hover {
-        color: black;
-        opacity: 0.5;
-      }
-    }
-  }
-}
+
 
 @media only screen and (max-width: 768px) {
   .pre-footer {

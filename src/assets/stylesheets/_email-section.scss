@@ -1,0 +1,54 @@
+.email-section {
+  z-index: 3;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 10%;
+  max-width: 30%;
+  min-width: 45%;
+  height: 55vh;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  button {
+    border-radius: 0.188em;
+    color: white;
+    outline: none;
+    resize: vertical;
+    background-color: #265c42;
+    font-weight: bold;
+    &:hover {
+      background-color: #265c42;
+    }
+  }
+  input {
+    height: 1.25em;
+  }
+  h4 {
+    display: block;
+    color: #212121;
+    opacity: 0.8;
+    width: 70%;
+    display: flex;
+    align-self: center;
+    white-space: normal !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .email-section {
+    max-width: 70%;
+  }
+}

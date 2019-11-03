@@ -18,7 +18,7 @@
 
 .heading > h3 {
   z-index: 0;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 1.875em;
 }
@@ -29,8 +29,12 @@
   z-index: 0;
 }
 
+.group-sessions-description > p {
+  color: black;
+}
+
 .blur-wrapper {
-  background-color: #8B4E6E;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: auto;
   position: absolute;

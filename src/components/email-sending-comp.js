@@ -1,6 +1,26 @@
 import React, { useState } from "react";
 import sendInfo from "../services/send-info";
 import Loader from "./loader-component";
+import { withStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+
+const CssTextField = withStyles({
+  root: {
+    "& label.Mui-focused": {
+      color: "black"
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "black"
+    },
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "black",
+        border: "1px solid black"
+      }
+    }
+  }
+})(TextField);
 
 const EmailSendingComp = ({ email, language }) => {
   const [message, setMessage] = useState("");
@@ -12,7 +32,11 @@ const EmailSendingComp = ({ email, language }) => {
     setIsLoading(true);
     e.preventDefault();
     sendInfo(
-      { email: userEmail.trim(), name: userName.trim(), message: userMessage.trim() },
+      {
+        email: userEmail.trim(),
+        name: userName.trim(),
+        message: userMessage.trim()
+      },
       "https://studio17.duckdns.org/api/uzenetkuldes"
     )
       .then(json => {
@@ -27,52 +51,55 @@ const EmailSendingComp = ({ email, language }) => {
   const handleChange = e => {
     return e.target.value;
   };
-  const removePlaceholder = e => (e.target.placeholder = "");
+
   return (
     <>
       <div className="email-section">
         <h3>{email["email header"]}</h3>
         <form onSubmit={onSubmit}>
-          <input
+          <CssTextField
+            id="outlined-basic"
+            label={email["email input"]}
+            margin="dense"
+            variant="outlined"
             name="email"
             type="email"
-            placeholder={email["email input"]}
-            onFocus={removePlaceholder}
-            onBlur={e => (e.target.placeholder = email["email input"])}
             required
             autoComplete="off"
             onChange={e => {
               setUserEmail(handleChange(e));
             }}
           />
-
-          <input
+          <CssTextField
+            id="outlined-basic"
+            label={email["name input"]}
+            margin="dense"
+            variant="outlined"
             name="name"
             type="name"
-            placeholder={email["name input"]}
-            onFocus={removePlaceholder}
-            onBlur={e => (e.target.placeholder = email["name input"])}
             required
             autoComplete="off"
             onChange={e => {
               setUserName(handleChange(e));
             }}
           />
-          <textarea
+          <CssTextField
+            id="outlined-basic"
+            label={email.message}
+            margin="dense"
+            variant="outlined"
             name="message"
             type="text"
-            placeholder={email.message}
-            onFocus={removePlaceholder}
-            onBlur={e => (e.target.placeholder = email.message)}
+            multiline
+            rowsMax="4"
             rows="7"
             cols="40"
-            required
             autoComplete="off"
             onChange={e => {
               setUserMessage(handleChange(e));
             }}
           />
-          <button type="submit"> {email.send}</button>
+          <Button type="submit"> {email.send}</Button>
           <h4>{message}</h4>
         </form>
       </div>

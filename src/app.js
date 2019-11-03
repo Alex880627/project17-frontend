@@ -13,8 +13,8 @@ const App = () => {
     <>
       <LandinPage />
       <Galery />
-      <TherapistListContainer />
       <TreatmentsListContainer />
+      <TherapistListContainer />
       <PricesContainer />
       <GroupSessionsContainer />
       <ContactsContainer />

@@ -2,13 +2,6 @@ $width: 100vw;
 $height: 100vh;
 $borderColor: rgb(255, 255, 255);
 
-body {
-  overflow-x: hidden;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 #root {
   position: relative;
   display: flex;
@@ -19,6 +12,7 @@ body {
   position: fixed;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .pic-galery {

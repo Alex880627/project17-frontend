@@ -18,7 +18,23 @@
     .navigation {
       display: flex;
       flex-direction: column;
-      a {
+      div {
+        width: 100%;
+        height: 62px;
+        background-color: rgb(82, 153, 73);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+        font-weight: bold;
+        a {
+          position: absolute;
+          width: 100%;
+          cursor: pointer;
+          padding: 1.25em;
+          padding-right: 0;
+          color: rgb(255, 255, 255);
+        }
+      }
+      > a {
         font-weight: bold;
         padding: 1.25em;
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -40,11 +56,9 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
   .side-bar-wrapper {
     position: fixed;
     top: 4.5em;
   }
 }
-

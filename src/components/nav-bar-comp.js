@@ -8,10 +8,10 @@ import HamburgerMenu from "./hamburger-icon-comp";
 import Loader from "./loader-component";
 
 const NavBarComp = props => {
-  console.log(props);
-
   let navbar = "HU";
+  let email = "HU"
   props.language === "HU" ? (navbar = hu.navbar) : (navbar = en.navbar);
+  props.language === "HU" ? (email = hu.footer.email) : (email = en.footer.email);
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [isLoading, setIsloading] = useState(false);
   useEffect(() => {
@@ -35,7 +35,7 @@ const NavBarComp = props => {
         sideBar={props.sideBar}
       />
       <div />
-      {innerWidth > 768 ? <NavigationLinksComp navbar={navbar} /> : null}
+      {innerWidth > 768 ? <NavigationLinksComp navbar={navbar} email={email} language={props.language}/> : null}
       {isLoading===true? <Loader />:null}
       <UpNavButton />
       <LanguagePickerButton

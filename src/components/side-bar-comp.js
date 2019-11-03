@@ -5,8 +5,10 @@ import en from "../assets/languages/lang-en.json";
 
 const SideBarComp = props => {
   let navbar = "HU";
-  let style;
+  let email = "HU"
   props.language === "HU" ? (navbar = hu.navbar) : (navbar = en.navbar);
+  props.language === "HU" ? (email = hu.footer.email) : (email = en.footer.email);
+  let style;
   const closeThePopUp = event => {
     const container = document.getElementsByClassName("side-bar")[0];
     if (event.target !== container && event.target.parentNode !== container) {
@@ -19,7 +21,7 @@ const SideBarComp = props => {
   return (
     <div className="side-bar-wrapper" style={style} onMouseUp={closeThePopUp}>
       <div className="side-bar"  onMouseUp={closeThePopUp}>
-        <NavigationLinksComp navbar={navbar} />
+        <NavigationLinksComp navbar={navbar} email={email} language={props.language}/>
       </div>
     </div>
   );

@@ -1,29 +1,31 @@
-html {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
-@import './_variables.scss';
-@import './_mixins.scss';
-@import './_therapist-list-style.scss';
-@import './_nav-bar.scss';
-@import './_language-picker-button.scss';
-@import './_galery.scss';
-@import './_close-button.scss';
-@import './_contacts.scss';
-@import './_landing-page.scss';
-@import './_group-sessions.scss';
-@import './_prices.scss';
-@import './_footer.scss';
-@import './_hamburger-menu.scss';
-@import './_side-bar.scss';
-@import './_loader-icon.scss';
-@import './_transparent-comp.scss';
-@import './_treatments.scss';
-@import './_privacy-policy.scss';
-@import './_404.scss';
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_therapist-list-style.scss";
+@import "./_nav-bar.scss";
+@import "./_language-picker-button.scss";
+@import "./_galery.scss";
+@import "./_close-button.scss";
+@import "./_contacts.scss";
+@import "./_landing-page.scss";
+@import "./_group-sessions.scss";
+@import "./_prices.scss";
+@import "./_footer.scss";
+@import "./_hamburger-menu.scss";
+@import "./_side-bar.scss";
+@import "./_loader-icon.scss";
+@import "./_transparent-comp.scss";
+@import "./_treatments.scss";
+@import "./_privacy-policy.scss";
+@import "./_404.scss";
+@import "./email-section.scss";

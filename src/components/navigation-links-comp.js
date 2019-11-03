@@ -1,6 +1,10 @@
 import React from "react";
+import simpleModal from "./modal-comp";
+import EmailSendingComp from "./email-sending-comp";
 
-const NavigationLinksComp = ({navbar}) => {
+const EmailSending = simpleModal(EmailSendingComp);
+
+const NavigationLinksComp = ({navbar, email, language}) => {
   return (
     <div className="navigation">
       <a href="#collagues">{navbar.colleagues}</a>
@@ -8,7 +12,8 @@ const NavigationLinksComp = ({navbar}) => {
       <a href="#prices">{navbar.prices}</a>
       <a href="#group-sessions">{navbar["group sessions"]}</a>
       <a href="#contacts">{navbar.contacts}</a>
-      <a href="#contacts" className="writeForUs">{navbar.contactUs}</a>
+      <EmailSending email={email} language={language} label={navbar.contactUs}/>
+      
     </div>
   );
 };

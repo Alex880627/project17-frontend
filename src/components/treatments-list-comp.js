@@ -14,48 +14,22 @@ const TreatementDropdown = ({ element }) => {
       open ? setOpen(false) : setOpen(true);
       currentElement.style.height = `${(currentElement.scrollHeight / 100) *
         6}em`;
+        currentElement.style.borderBottom = '1px solid black';
+        currentElement.style.margin = '13px';
     } else {
       currentElement.style.height = "3em";
+      currentElement.style.margin = '0px';
+      currentElement.style.borderBottom = '0px solid black'
       setOpen(false);
     }
     currentElement.parentNode.childNodes.forEach(element => {
       element.childNodes[0].style.transform = "scaleY(1)";
       return element !== treatmentRef.current
-        ? (element.style.height = "3em")
+        ? (element.style.height = "3em", element.style.margin = '0px', element.style.borderBottom = '0px solid black')
         : null;
     });
   };
-  const hoverOnScroll = () => {
-    if (window.innerWidth < 769) {
-      const container = document.elementFromPoint(
-        window.innerWidth / 2,
-        window.innerHeight / 3
-      );
-      if (
-        (prevContainer !== "" &&
-          prevContainer !== container &&
-          container.parentElement.className === "treatment") ||
-        (container.parentElement.id === "root" && prevContainer !== "")
-      ) {
-        prevContainer.parentElement.classList.remove("treatments-mobile-view");
-      }
-      if (container.parentElement.className === "treatment") {
-        if (
-          !container.parentElement.classList.contains("treatments-mobile-view")
-        ) {
-          container.parentElement.classList.add("treatments-mobile-view");
-        }
-        prevContainer = container;
-      }
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", hoverOnScroll);
-    return () => {
-      window.removeEventListener("scroll", hoverOnScroll);
-    };
-    // eslint-disable-next-line
-  }, []);
+
   const mounted = useRef();
   useEffect(() => {
     if (!mounted.current) {
@@ -86,8 +60,8 @@ const TreatementDropdown = ({ element }) => {
         style={window.innerWidth > 768 ? { cursor: "pointer" } : null}
         style={
           open === true
-            ? { transform: "scaleY(-1)", transition: "transform 0.3s" }
-            : { transform: "scaleY(1)", transition: "transform 0.3s" }
+            ? { transform: "scaleY(-1)", transition: "transform 0.3s"}
+            : { transform: "scaleY(1)", transition: "transform 0.3s"}
         }
       />
       <h3>{element.title}</h3>
