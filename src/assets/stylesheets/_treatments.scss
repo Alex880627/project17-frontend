@@ -9,6 +9,7 @@
   height: 3em;
   overflow: hidden;
   h3 {
+    color: #000000;
     width: 100%;
     text-align: left;
     margin-left: 20px;
@@ -20,6 +21,20 @@
   }
 }
 
+.treatments-section-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  h3 {
+    color: #000000;
+  }
+}
+
 .treatments-wrapper {
   position: relative;
   width: 100%;
@@ -28,6 +43,7 @@
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  background-color: white;
 }
 
 .arrow-down {

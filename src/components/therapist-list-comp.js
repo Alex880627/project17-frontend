@@ -8,8 +8,10 @@ import pic2hover from "../pic/theraphists/pic2hover.jpg";
 import pic3hover from "../pic/theraphists/pic3hover.jpg";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
+import Scroll from "react-scroll";
 
 const TherapistListComp = props => {
+  const Link = Scroll.Element;
   let collagues;
   props.language === "HU"
     ? (collagues = hu.collagues)
@@ -56,7 +58,9 @@ const TherapistListComp = props => {
         prevContainer.parentElement.classList.remove("threapist-mobile-view");
       }
       if (container.parentElement.className === "therapist") {
-        if (!container.parentElement.classList.contains("threapist-mobile-view")) {
+        if (
+          !container.parentElement.classList.contains("threapist-mobile-view")
+        ) {
           container.parentElement.classList.add("threapist-mobile-view");
         }
         prevContainer = container;
@@ -73,6 +77,7 @@ const TherapistListComp = props => {
   return (
     <>
       <div className="therapist-wrapper" id="collagues">
+        <Link name="therapists"></Link>
         <div className="therapist-heading">
           <h3>{collagues.collagues}</h3>
           <img src={icon} alt="therapist icon" />

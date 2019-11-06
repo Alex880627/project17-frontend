@@ -1,10 +1,12 @@
 import React from "react";
+import Scroll from "react-scroll";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import mockdata from "../assets/languages/mock-server-data.json";
 import timeTableIconWhite from "../pic/groupsessions/timeTableIconWhite.png";
 
 const GroupSessionsContainer = props => {
+  const Link = Scroll.Element;
   let groupSessions = "HU";
   props.language === "HU"
     ? (groupSessions = hu["group sessions"])
@@ -41,17 +43,17 @@ const GroupSessionsContainer = props => {
   };
   return (
     <>
-      <div className="transperent-wrapper" id="group-sessions">
-        <div className="blur-wrapper" />
+      <div className="group-sessions-wrapper" id="group-sessions">
+        <Link name="group-sessions"></Link>
         <div className="heading">
           <h3>{groupSessions["group sessions title"]}</h3>
-          <img src={timeTableIconWhite} alt="time table icon"/>
+          <img src={timeTableIconWhite} alt="time table icon" />
         </div>
-          <div className="group-sessions-description">
+        <div className="group-sessions-description">
           <p>{groupSessions.description}</p>
           <h4>{groupSessions.interval}</h4>
-          </div>
-          
+        </div>
+
         <table>
           <tbody>
             <tr>
@@ -70,7 +72,8 @@ const GroupSessionsContainer = props => {
                         return data.day === day;
                       });
                       return filteredTableData.length !== 0 ? (
-                        <td key={`${Math.random()}`}
+                        <td
+                          key={`${Math.random()}`}
                           style={{
                             backgroundColor: getColorForTherapist(
                               filteredTableData[0].therapist
@@ -81,7 +84,7 @@ const GroupSessionsContainer = props => {
                           <h3>{filteredTableData[0].therapist}</h3>
                         </td>
                       ) : (
-                        <td key={`${Math.random()}`}/> // eslint-disable-line no-use-before-define
+                        <td key={`${Math.random()}`} /> // eslint-disable-line no-use-before-define
                       );
                     })}
                   </tr>

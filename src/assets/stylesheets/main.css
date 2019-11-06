@@ -30,8 +30,7 @@ body {
 
 .therapist-wrapper {
   z-index: 0;
-  background-color: white;
-  border-radius: 0.313em;
+  background-color: #265C42;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -54,7 +53,7 @@ body {
 }
 
 .therapist-heading > h3 {
-  color: #303030;
+  color: white;
   text-align: center;
   font-size: 1.875em;
 }
@@ -783,8 +782,67 @@ body {
   height: 100vh;
 }
 
-.group-sessions-description {
+#treatments {
+  background-color: white;
+}
+
+.group-sessions-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #265C42;
+}
+
+.heading {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading > h3 {
+  z-index: 0;
   color: white;
+  text-align: center;
+  font-size: 1.875em;
+}
+
+.heading > img {
+  height: auto;
+  width: 5em;
+  margin-bottom: 1.875em;
+  z-index: 0;
+}
+
+.group-sessions-description > p, h4 {
+  color: white;
+}
+
+.group-sessions-description {
+  color: black;
   z-index: 0;
   max-width: 40.625em;
   text-align: justify;
@@ -1238,7 +1296,32 @@ tr:nth-child(even) > td {
   }
 }
 
-.transperent-wrapper {
+.treatment {
+  z-index: 0;
+  background-color: white;
+  border-top: 1px solid black;
+  width: 40em;
+  color: #212121;
+  padding: 10px;
+  margin: 0px;
+  height: 3em;
+  overflow: hidden;
+}
+
+.treatment h3 {
+  color: #000000;
+  width: 100%;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.treatment p {
+  text-align: justify;
+}
+
+.treatments-section-wrapper {
   width: 100%;
   height: auto;
   position: relative;
@@ -1255,76 +1338,11 @@ tr:nth-child(even) > td {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.heading {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.heading > h3 {
-  z-index: 0;
-  color: black;
-  text-align: center;
-  font-size: 1.875em;
-}
-
-.heading > img {
-  height: auto;
-  width: 5em;
-  margin-bottom: 1.875em;
-  z-index: 0;
-}
-
-.group-sessions-description > p {
-  color: black;
-}
-
-.blur-wrapper {
   background-color: white;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
 }
 
-.treatment {
-  z-index: 0;
-  background-color: white;
-  border-top: 1px solid black;
-  width: 40em;
-  color: #212121;
-  padding: 10px;
-  margin: 0px;
-  height: 3em;
-  overflow: hidden;
-}
-
-.treatment h3 {
-  width: 100%;
-  text-align: left;
-  margin-left: 20px;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
-
-.treatment p {
-  text-align: justify;
+.treatments-section-wrapper h3 {
+  color: #000000;
 }
 
 .treatments-wrapper {
@@ -1342,6 +1360,7 @@ tr:nth-child(even) > td {
           align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  background-color: white;
 }
 
 .arrow-down {
@@ -1587,5 +1606,11 @@ tr:nth-child(even) > td {
 .control-dots .dot:hover {
   cursor: pointer;
   background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .control-dots {
+    visibility: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

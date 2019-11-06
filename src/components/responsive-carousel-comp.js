@@ -12,25 +12,28 @@ class ResponsiveCarousel extends React.Component {
     super(props);
     this.state = {
       pictures: [pic4, pic5, pic6, pic7, pic8],
-      innerWidth: window.innerWidth,
-      scrollHeight: window.pageYOffset,
-      myRef: React.createRef()
+      pictureWidth: ""
     };
   }
+  componentDidMount(){
+    this.calsculateScreen();
+  }
+  calsculateScreen(){
+    window.innerWidth/window.innerHeight<1.9?
+    this.setState({pictureWidth: "1285px"}):this.setState({pictureWidth: "100%"})
+  }
   render (){
-    console.log(this.state.myRef);
-    
     return(<Carousel
     className="carousel-fixed"
-    ref={this.state.myRef}
       swipeScrollTolerance
       showArrows={false}
-      width={1265}
+      width={"1275px"}
       showThumbs={false}
       showStatus={false}
       autoPlay
-      interval={5000}
+      interval={7000}
       infiniteLoop
+      showIndicators={window.innerWidth>768? true:false}
     >
       {this.state.pictures.map(element => {
         return (

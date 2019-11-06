@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import Scroll from "react-scroll";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
@@ -71,13 +72,14 @@ const TreatementDropdown = ({ element }) => {
 };
 
 const TreatmentsListComp = props => {
+  const Link = Scroll.Element;
   let treatments;
   props.language === "HU"
     ? (treatments = hu.treatments)
     : (treatments = en.treatments);
   return (
-    <div className="transperent-wrapper" id="treatments">
-      <div className="blur-wrapper" />
+    <div className="treatments-section-wrapper" id="treatments">
+      <Link name="treatements"></Link>
       <div className="heading">
         <h3>{treatments["treatments title"]}</h3>
         <img src={treatmentsIcon} alt="treatments icon" />

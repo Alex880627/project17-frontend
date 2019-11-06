@@ -17,6 +17,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   html, body {
+
   -webkit-overflow-scrolling: touch;
   }
 }
@@ -30,13 +31,12 @@ body {
 @import "./_close-button.scss";
 @import "./_contacts.scss";
 @import "./_landing-page.scss";
-@import "./_group-sessions.scss";
+@import "./_group-sessions-comp.scss";
 @import "./_prices.scss";
 @import "./_footer.scss";
 @import "./_hamburger-menu.scss";
 @import "./_side-bar.scss";
 @import "./_loader-icon.scss";
-@import "./_transparent-comp.scss";
 @import "./_treatments.scss";
 @import "./_privacy-policy.scss";
 @import "./_404.scss";
