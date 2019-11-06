@@ -11,7 +11,7 @@ const NavigationLinksComp = ({ navbar, email, language }) => {
       delay: 100,
       duration: 300,
       smooth: "easeInOutExpo",
-      offset: window.innerwidth<768? -75:0
+      offset: -75
     });
   };
   return (
