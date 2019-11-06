@@ -23,7 +23,6 @@ class ResponsiveCarousel extends React.Component {
     return(<Carousel
     className="carousel-fixed"
     ref={this.state.myRef}
-      emulateTouch
       swipeScrollTolerance
       showArrows={false}
       width={1265}

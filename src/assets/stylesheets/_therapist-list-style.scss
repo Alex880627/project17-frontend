@@ -1,6 +1,5 @@
 .therapist-wrapper {
   z-index: 0;
-  padding: 1.563em;
   background-color: white;
   border-radius: 0.313em;
   width: 100%;
@@ -113,9 +112,6 @@
 
 
 .therapist-details-container {
-  ::-webkit-scrollbar {
-    width: 0px;
-}
   display: flex;
   flex-grow: 1;
   justify-content: center;

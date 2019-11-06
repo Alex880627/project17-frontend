@@ -1,15 +1,11 @@
 .carousel-fixed {
   position: fixed;
   top: 0;
-  overflow: hidden;
-
 }
 
 .carousel {
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
-  z-index: 0;
   -ms-touch-action: pan-x !important;
   touch-action: pan-x !important;
 }
