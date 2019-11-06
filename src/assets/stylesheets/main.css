@@ -1561,6 +1561,8 @@ tr:nth-child(even) > td {
   position: fixed;
   top: 0;
   overflow: hidden;
+  -ms-touch-action: pan-x;
+  touch-action: pan-x;
 }
 
 .carousel {
