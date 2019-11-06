@@ -784,12 +784,6 @@ body {
   height: 100vh;
 }
 
-@media only screen and (max-width: 768px) {
-  .landing-page {
-    pointer-events: auto;
-  }
-}
-
 .group-sessions-description {
   color: white;
   z-index: 0;
@@ -1572,6 +1566,7 @@ tr:nth-child(even) > td {
 .carousel {
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
   z-index: 0;
 }
 
