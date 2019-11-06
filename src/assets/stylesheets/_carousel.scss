@@ -1,0 +1,32 @@
+.carousel-fixed {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  margin: 0 auto;
+  
+  z-index: 0;
+}
+
+.control-dots {
+  position: relative;
+  top: 66%;
+  .dot {
+    z-index: 1;
+    width: 0.8em !important;
+    height: 0.8em !important;
+    outline: none !important;
+    background-color: transparent;
+    margin: 0.5em;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255) !important;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+} 
+

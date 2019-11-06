@@ -6,7 +6,6 @@ import treatmentsIcon from "../pic/icons/treatments-icon.png";
 const TreatementDropdown = ({ element }) => {
   const [hover, setHover] = useState(0);
   const [open, setOpen] = useState(false);
-  let prevContainer = "";
   const treatmentRef = useRef(null);
   const currentElement = treatmentRef.current;
   const changeHeight = () => {
@@ -47,6 +46,7 @@ const TreatementDropdown = ({ element }) => {
         transition: "all 0.3s",
         cursor: "pointer"
       }}
+      // trick to not have undefined error
       ref={treatmentRef}
       onMouseEnter={() => {
         setHover(1);
