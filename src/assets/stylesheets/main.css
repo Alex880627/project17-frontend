@@ -1,5 +1,6 @@
 html,
 body {
+  overflow-y: scroll;
   margin: 0;
   padding: 0;
   width: auto;
@@ -1561,8 +1562,6 @@ tr:nth-child(even) > td {
   position: fixed;
   top: 0;
   overflow: hidden;
-  -ms-touch-action: pan-x;
-  touch-action: pan-x;
 }
 
 .carousel {
@@ -1570,6 +1569,8 @@ tr:nth-child(even) > td {
   margin: 0 auto;
   overflow: hidden;
   z-index: 0;
+  -ms-touch-action: pan-x !important;
+  touch-action: pan-x !important;
 }
 
 .control-dots {

@@ -13,12 +13,16 @@ class ResponsiveCarousel extends React.Component {
     this.state = {
       pictures: [pic4, pic5, pic6, pic7, pic8],
       innerWidth: window.innerWidth,
-      scrollHeight: window.pageYOffset
+      scrollHeight: window.pageYOffset,
+      myRef: React.createRef()
     };
   }
   render (){
+    console.log(this.state.myRef);
+    
     return(<Carousel
     className="carousel-fixed"
+    ref={this.state.myRef}
       emulateTouch
       swipeScrollTolerance
       showArrows={false}

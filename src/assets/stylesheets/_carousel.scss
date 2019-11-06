@@ -2,8 +2,7 @@
   position: fixed;
   top: 0;
   overflow: hidden;
-  -ms-touch-action: pan-x;
-  touch-action: pan-x;
+
 }
 
 .carousel {
@@ -11,6 +10,8 @@
   margin: 0 auto;
   overflow: hidden;
   z-index: 0;
+  -ms-touch-action: pan-x !important;
+  touch-action: pan-x !important;
 }
 
 .control-dots {
