@@ -21,7 +21,7 @@ class ResponsiveCarousel extends React.Component {
     className="carousel-fixed"
       emulateTouch
       showArrows={false}
-      width={window.screen.width}
+      width={1265}
       showThumbs={false}
       showStatus={false}
       autoPlay
