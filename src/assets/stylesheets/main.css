@@ -1644,7 +1644,7 @@ tr > td:first-child {
 }
 
 .makeStyles-list-1 .MuiListItemIcon-root img {
-  max-width: 2rem;
+  max-width: 2rem !important;
 }
 
 .makeStyles-list-1 .MuiTouchRipple-root {
