@@ -3,7 +3,7 @@ import Scroll from "react-scroll";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import mockdata from "../assets/languages/mock-server-data.json";
-import timeTableIconWhite from "../pic/groupsessions/timeTableIconWhite.png";
+import groupIcon from "../pic/icons/group-icon.png";
 
 const GroupSessionsContainer = props => {
   const Link = Scroll.Element;
@@ -11,16 +11,6 @@ const GroupSessionsContainer = props => {
   props.language === "HU"
     ? (groupSessions = hu["group sessions"])
     : (groupSessions = en["group sessions"]);
-
-  const getColorForTherapist = inputName => {
-    let result;
-    hu.collagues.therapists.forEach(element => {
-      if (element["nick name"] === inputName) {
-        result = element.color;
-      }
-    });
-    return result;
-  };
   const makeMultiArrayFromDataByHours = objArray => {
     objArray.sort((a, b) => parseFloat(a.hour) - parseFloat(b.hour));
     let resultArr = [];
@@ -47,7 +37,7 @@ const GroupSessionsContainer = props => {
         <Link name="group-sessions"></Link>
         <div className="heading">
           <h3>{groupSessions["group sessions title"]}</h3>
-          <img src={timeTableIconWhite} alt="time table icon" />
+          <img src={groupIcon} alt="time table icon" />
         </div>
         <div className="group-sessions-description">
           <p>{groupSessions.description}</p>
@@ -74,14 +64,10 @@ const GroupSessionsContainer = props => {
                       return filteredTableData.length !== 0 ? (
                         <td
                           key={`${Math.random()}`}
-                          style={{
-                            backgroundColor: getColorForTherapist(
-                              filteredTableData[0].therapist
-                            )
-                          }}
                         >
                           {" "}
                           <h3>{filteredTableData[0].therapist}</h3>
+                          <p><span>(</span>{filteredTableData[0].type}<span>)</span></p>
                         </td>
                       ) : (
                         <td key={`${Math.random()}`} /> // eslint-disable-line no-use-before-define

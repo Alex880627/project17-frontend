@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import icon from "../pic/theraphists/icon.png";
+import therapists from "../pic/icons/therapists.png";
 import pic1 from "../pic/theraphists/pic1.jpg";
 import pic2 from "../pic/theraphists/pic2.jpg";
 import pic3 from "../pic/theraphists/pic3.jpg";
@@ -80,7 +80,7 @@ const TherapistListComp = props => {
         <Link name="therapists"></Link>
         <div className="therapist-heading">
           <h3>{collagues.collagues}</h3>
-          <img src={icon} alt="therapist icon" />
+          <img src={therapists} alt="therapist icon" />
         </div>
         <div className="therapist-pictures">
           {picArray.map((element, index) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LanguagePickerButton from "./language-picker-button-comp";
-import UpNavButton from "./up-nav-button";
+import UpNavButtonContainer from "../containers/up-button-container";
 import NavigationLinksComp from "./navigation-links-comp";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
@@ -37,7 +37,7 @@ const NavBarComp = props => {
       <div />
       {innerWidth > 768 ? <NavigationLinksComp navbar={navbar} email={email} language={props.language}/> : null}
       {isLoading===true? <Loader />:null}
-      <UpNavButton />
+      <UpNavButtonContainer />
       <LanguagePickerButton
         changeLanguageToEN={props.changeLanguageToEN}
         changeLanguageToHU={props.changeLanguageToHU}

@@ -138,5 +138,6 @@
      "sentence": "Az oldalon a felhasználóélmény javítása érdekében sütiket használunk. Az oldal használatával elfogadod a",
      "link": "Felhasználási Feltételeinket",
      "button": "Rendben"
-  }
+  },
+  "upButton": ".fel"
 }

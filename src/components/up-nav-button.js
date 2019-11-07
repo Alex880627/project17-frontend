@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import upButton from "../pic/icons/arrow-up-icon.jpg";
+import hu from "../assets/languages/lang-hu.json";
+import en from "../assets/languages/lang-en.json";
 
-const UpNavButton = () => {
+const UpNavButton = (props) => {
+  console.log(props, hu);
+  
+  let upButton = "HU";
+  props.language === "HU" ? (upButton = hu.upButton) : (upButton = en.upButton);
   const [visibility, setVisibility] = useState("hidden");
   const onScroll = event => {
     if (window.pageYOffset > 400) {
@@ -14,7 +19,7 @@ const UpNavButton = () => {
   return (
     <nav className="up-button">
       <a href="#page-up">
-        <img src={upButton} className={visibility} alt="up button"/>
+        <h1 className={visibility}>{upButton}</h1>
       </a>
     </nav>
   );

@@ -3,42 +3,50 @@
     {
       "day": "monday",
       "hour": "18:00",
-      "therapist": "Szilvi"
+      "therapist": "Szilvi",
+      "type": "Funkcionális Gyógytorna"
     },
     {
       "day": "tuesday",
       "hour": "7:30",
-      "therapist": "Panka"
+      "therapist": "Panka",
+      "type": "Funkcionális Gyógytorna"
     },
     {
       "day": "tuesday",
       "hour": "13:00",
-      "therapist": "Panka"
+      "therapist": "Panka",
+      "type": "Thai-chi"
     },
     {
       "day": "tuesday",
       "hour": "17:00",
-      "therapist": "Panka"
+      "therapist": "Panka",
+      "type": "Gerinctorna"
     },
     {
       "day": "wednesday",
       "hour": "18:00",
-      "therapist": "Szilvi"
+      "therapist": "Szilvi",
+      "type": "Gerinctorna"
     },
     {
       "day": "friday",
       "hour": "18:00",
-      "therapist": "Szilvi"
+      "therapist": "Szilvi",
+      "type": "Karate"
     },
     {
       "day": "thursday",
       "hour": "7:30",
-      "therapist": "Panka"
+      "therapist": "Panka",
+      "type": "Pank-ráció"
     },
     {
       "day": "thursday",
       "hour": "17:00",
-      "therapist": "Panka"
+      "therapist": "Panka",
+      "type": "Pank-ráció extra"
     }
   ]
 }

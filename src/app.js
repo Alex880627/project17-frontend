@@ -6,13 +6,13 @@ import PricesContainer from "./containers/prices-container";
 import TreatmentsListContainer from "./containers/treatments-list-container";
 import ContactsContainer from "./containers/contacts-container";
 import FooterContainer from "./containers/footer-container";
-import ResponsiveCarousel from "./components/responsive-carousel-comp"
+import CoverPic from "./components/cover-photo"
 
 const App = () => {
   return (
     <>
       <LandinPage />
-      <ResponsiveCarousel/>
+      <CoverPic/>
       <TreatmentsListContainer />
       <TherapistListContainer />
       <PricesContainer />

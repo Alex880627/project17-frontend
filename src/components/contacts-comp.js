@@ -1,7 +1,7 @@
 import React from "react";
 import Scroll from "react-scroll";
 import GoogleMapConfigured from "./google-maps-comp-config";
-import contactsIcon from "../pic/contacts/contactsIcon.jpg";
+import contactsIcon from "../pic/icons/contactsIcon.png";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 

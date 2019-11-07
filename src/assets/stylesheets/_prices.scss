@@ -1,7 +1,6 @@
 .prices-wrapper {
   z-index: 0;
   background-color: rgb(255, 255, 255);
-  border-radius: 5px;
   width: 100%;
   height: auto;
 }
@@ -32,25 +31,19 @@
 
 .treatments-list {
   width: 45%;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 0.625em;
   text-align: center;
   margin-bottom: 30px;
-  border-radius: 0.313em;
   display: flex;
   flex-direction: column;
-  align-items: inherit;
-  background-color: rgb(0, 122, 114);
-  background: linear-gradient(180deg, rgba(0, 122, 114, 1) 0%, rgba(51, 51, 51, 1) 30%);
-  transition: background-color 0.5s;
-  transition: all .2s ease-in-out;
-  &:hover {
-    @include hoverPrices;
-  }
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-.onhover {
-  @include hoverPrices;
+.style-wrapper {
+  width: 80%;
 }
 
 .treatments-list > p:nth-child(4) {

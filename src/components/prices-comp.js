@@ -4,42 +4,10 @@ import en from "../assets/languages/lang-en.json";
 import pricesIcon from "../pic/icons/wallet-icon.png";
 import Scroll from "react-scroll";
 
-
 const PricesComp = props => {
   const Link = Scroll.Element;
   let prices = "HU";
   props.language === "HU" ? (prices = hu.prices) : (prices = en.prices);
-  let prevContainer = "";
-  const hoverOnScroll = () => {
-    if (window.innerWidth < 769) {
-      const container = document.elementFromPoint(
-        window.innerWidth / 2,
-        (window.innerHeight / 3) * 2
-      );
-      if (
-        (prevContainer !== "" &&
-          prevContainer !== container &&
-          container.className === "treatments-list") ||
-        (container.parentElement.id === "root" && prevContainer !== "")
-      ) {
-        prevContainer.classList.remove("onhover");
-      }
-      if (container.className === "treatments-list") {
-        if (!container.classList.contains("onhover")) {
-          container.classList.add("onhover");
-        }
-        prevContainer = container;
-      }
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", hoverOnScroll);
-    return () => {
-      window.removeEventListener("scroll", hoverOnScroll);
-    };
-    // eslint-disable-next-line
-  }, []);
   return (
     <div className="prices-wrapper" id="prices">
       <Link name="prices"></Link>
@@ -51,9 +19,11 @@ const PricesComp = props => {
         {prices.treatments.map(element => {
           return (
             <div className="treatments-list" key={element.name}>
-              <h3>{element.name}</h3>
-              <p>{element.price}</p>
-              <p>{`/${prices.occasion} (${element.duration})`}</p>
+              <div className="style-wrapper">
+                <h3>{element.name}</h3>
+                <p>{element.price}</p>
+                <p>{`/${prices.occasion} (${element.duration})`}</p>
+              </div>
               <p>{element.description}</p>
             </div>
           );
