@@ -1614,6 +1614,7 @@ tr > td:first-child {
 
 .blur-img img {
   position: absolute;
+  background-size: cover;
   margin: 0 auto;
   opacity: 0.9;
   -webkit-filter: blur(4px);
@@ -1628,6 +1629,22 @@ tr > td:first-child {
   opacity: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+@media only screen and (max-width: 768px) {
+  .blur-img {
+    top: 0;
+    z-index: 0;
+    position: fixed;
+    height: 100%;
+    background-color: black;
+  }
+  .blur-img img {
+    position: absolute;
+    background-size: cover;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
 }
 
 .makeStyles-list-1 .MuiButtonBase-root {
