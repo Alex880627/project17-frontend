@@ -8,7 +8,8 @@
     }
   }
   .MuiListItemIcon-root {
-    max-width: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
   }
   .MuiTouchRipple-root {
     color: rgb(10, 109, 61);
@@ -22,5 +23,6 @@
 }
 
 #drawer-icons {
-  max-width: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
 }
