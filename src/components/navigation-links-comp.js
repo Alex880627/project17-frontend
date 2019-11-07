@@ -6,6 +6,7 @@ const scroller = Scroll.scroller;
 const EmailSending = simpleModal(EmailSendingComp);
 
 const NavigationLinksComp = ({ navbar, email, language }) => {
+  
   const link = (element) => {
     scroller.scrollTo(element, {
       delay: 100,
@@ -16,10 +17,10 @@ const NavigationLinksComp = ({ navbar, email, language }) => {
   };
   return (
     <div className="navigation">
-      <a onClick={()=>{link("therapists")}}>{navbar.colleagues}</a>
-      <a onClick={()=>{link("treatements")}}>{navbar["treatments"]}</a>
+      <a onClick={()=>{link("colleagues")}}>{navbar.colleagues}</a>
+      <a onClick={()=>{link("treatments")}}>{navbar["treatments"]}</a>
       <a onClick={()=>{link("prices")}}>{navbar.prices}</a>
-      <a onClick={()=>{link("group-sessions")}}>{navbar["group sessions"]}</a>
+      <a onClick={()=>{link("group sessions")}}>{navbar["group sessions"]}</a>
       <a onClick={()=>{link("contacts")}}>{navbar.contacts}</a>
       <EmailSending
         email={email}

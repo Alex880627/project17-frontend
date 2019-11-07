@@ -135,9 +135,13 @@
     ]
   },
   "privacy policy": {
-     "sentence": "Az oldalon a felhasználóélmény javítása érdekében sütiket használunk. Az oldal használatával elfogadod a",
-     "link": "Felhasználási Feltételeinket",
-     "button": "Rendben"
+    "sentence": "Az oldalon a felhasználóélmény javítása érdekében sütiket használunk. Az oldal használatával elfogadod a",
+    "link": "Felhasználási Feltételeinket",
+    "button": "Rendben"
   },
-  "upButton": ".fel"
+  "upButton": ".fel",
+  "landingSentence": {
+    "coverSentenceLeft": "Megszüntetjük Fájdalmát,",
+    "coverSentenceRight": "és Visszaadjuk a Mozgás Örömét."
+  }
 }

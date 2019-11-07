@@ -35,7 +35,7 @@ const NavBarComp = props => {
         sideBar={props.sideBar}
       />
       <div />
-      {innerWidth > 768 ? <NavigationLinksComp navbar={navbar} email={email} language={props.language}/> : null}
+      {innerWidth > 768 ? <NavigationLinksComp props={props} navbar={navbar} email={email} language={props.language}/> : null}
       {isLoading===true? <Loader />:null}
       <UpNavButtonContainer />
       <LanguagePickerButton

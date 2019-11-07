@@ -138,5 +138,9 @@
     "link": "Felhasználási Feltételeinket",
     "button": "OK"
   },
-  "upButton": ".up"
+  "upButton": ".up",
+  "landingSentence": {
+    "coverSentenceLeft": "Megszüntetjük Fájdalmát,",
+    "coverSentenceRight": "és Visszaadjuk a Mozgás Örömét."
+  }
 }

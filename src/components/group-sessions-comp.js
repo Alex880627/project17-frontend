@@ -34,7 +34,7 @@ const GroupSessionsContainer = props => {
   return (
     <>
       <div className="group-sessions-wrapper" id="group-sessions">
-        <Link name="group-sessions"></Link>
+        <Link name="group sessions"></Link>
         <div className="heading">
           <h3>{groupSessions["group sessions title"]}</h3>
           <img src={groupIcon} alt="time table icon" />

@@ -76,8 +76,8 @@ const TherapistListComp = props => {
   }, []);
   return (
     <>
-      <div className="therapist-wrapper" id="collagues">
-        <Link name="therapists"></Link>
+      <div className="therapist-wrapper" id="colleagues">
+        <Link name="colleagues"></Link>
         <div className="therapist-heading">
           <h3>{collagues.collagues}</h3>
           <img src={therapists} alt="therapist icon" />
