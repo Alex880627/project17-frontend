@@ -1583,14 +1583,13 @@ tr > td:first-child {
 .blur-img {
   top: 0;
   position: fixed;
-  margin: 0 auto;
+  height: 100%;
   background-color: black;
 }
 
 .blur-img img {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  margin: 0 auto;
   opacity: 0.9;
   -webkit-filter: blur(4px);
           filter: blur(4px);
