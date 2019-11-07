@@ -26,7 +26,7 @@ const ContactsComp = props => {
           {contacts["contacts info"]["ringbell number"]}
         </p>
         <p>{"E-mail:"}</p>
-        <p>{contacts["contacts info"].email}</p>
+        <p onClick={props.openModal}>{contacts["contacts info"].email}</p>
       </div>
       <GoogleMapConfigured />
     </div>

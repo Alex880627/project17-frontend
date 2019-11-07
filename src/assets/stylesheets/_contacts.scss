@@ -34,6 +34,7 @@
   box-shadow: 0 0 0.938em 1px rgb(54, 54, 54);
   line-height: 0px;
   color: rgb(0, 0, 0);
+  border-radius: 5px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -53,6 +54,12 @@
   }
   p {
     white-space: pre;
+    &:last-child {
+      text-decoration: underline;
+    }
+    &:last-child:hover {
+      cursor:pointer;
+    }
   }
 }
 

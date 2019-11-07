@@ -1,5 +1,15 @@
 import { connect } from 'react-redux';
 import ContactsComp from '../components/contacts-comp';
+import {
+  openModalAction,
+  closeModalAction
+} from "../actions/toogle-modal-action";
+
+const mapDispatchToProps = dispatch => ({
+  openModal: () => {
+    dispatch(openModalAction());
+  },
+});
 
 const mapStateToProps = state => (
   {
@@ -8,7 +18,7 @@ const mapStateToProps = state => (
 
 const ContactsContainer = connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps,
 )(ContactsComp);
 
 export default ContactsContainer;

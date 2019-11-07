@@ -725,6 +725,7 @@ body ::-webkit-scrollbar {
           box-shadow: 0 0 0.938em 1px #363636;
   line-height: 0px;
   color: black;
+  border-radius: 5px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -756,6 +757,14 @@ body ::-webkit-scrollbar {
 
 .address-details p {
   white-space: pre;
+}
+
+.address-details p:last-child {
+  text-decoration: underline;
+}
+
+.address-details p:last-child:hover {
+  cursor: pointer;
 }
 
 .address-details > h4 {
@@ -1635,7 +1644,7 @@ tr > td:first-child {
 }
 
 .makeStyles-list-1 .MuiListItemIcon-root img {
-  width: 30px;
+  max-width: 2rem;
 }
 
 .makeStyles-list-1 .MuiTouchRipple-root {

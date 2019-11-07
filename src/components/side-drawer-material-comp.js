@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function SideDrawer(props) {
+export default function SideDrawer(props) { 
   const scroller = Scroll.scroller;
   const icons = [
     treatmentsIcon,
@@ -60,7 +60,7 @@ export default function SideDrawer(props) {
   const toggleDrawer = (side, open) => event => {
     setTimeout(()=> {
       props.closeSideBar();
-    },300 )
+    },100 )
     
     if (
       event.type === "keydown" &&
@@ -99,8 +99,7 @@ export default function SideDrawer(props) {
               key={"text"}
               onClick={e => {
                 e.stopPropagation();
-                let a = document.getElementsByClassName("openModalMessage");
-                a[0].click();
+                props.openModal();
               }}
             >
               <ListItemText primary={element[1]} />

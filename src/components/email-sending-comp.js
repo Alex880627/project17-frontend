@@ -5,6 +5,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
+import simpleModal from "./modal-comp";
+
 const CssTextField = withStyles({
   root: {
     "& label.Mui-focused": {
@@ -58,6 +60,7 @@ const EmailSendingComp = ({ email, language }) => {
         <h3>{email["email header"]}</h3>
         <form onSubmit={onSubmit}>
           <CssTextField
+            autoFocus={true}
             id="outlined-basic"
             label={email["email input"]}
             margin="dense"
@@ -107,4 +110,7 @@ const EmailSendingComp = ({ email, language }) => {
     </>
   );
 };
-export default EmailSendingComp;
+
+const EmailSending = simpleModal(EmailSendingComp);
+
+export default EmailSending;
