@@ -1643,8 +1643,8 @@ tr > td:first-child {
   color: aqua;
 }
 
-.makeStyles-list-1 .MuiListItemIcon-root img {
-  max-width: 2rem !important;
+.makeStyles-list-1 .MuiListItemIcon-root {
+  max-width: 30px !important;
 }
 
 .makeStyles-list-1 .MuiTouchRipple-root {
@@ -1655,5 +1655,9 @@ tr > td:first-child {
 
 .makeStyles-list-1 .MuiListItemText-root span {
   text-align: left;
+}
+
+#drawer-icons {
+  max-width: 30px !important;
 }
 /*# sourceMappingURL=main.css.map */

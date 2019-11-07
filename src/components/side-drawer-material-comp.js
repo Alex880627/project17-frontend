@@ -90,7 +90,7 @@ export default function SideDrawer(props) {
             >
               <ListItemText primary={element[1]} />
               <ListItemIcon>
-                <img src={icons[index]} />
+                <img src={icons[index]} id="drawer-icons"/>
               </ListItemIcon>
             </ListItem>
           ) : (
@@ -104,7 +104,7 @@ export default function SideDrawer(props) {
             >
               <ListItemText primary={element[1]} />
               <ListItemIcon style={{ pointerEvents: "none" }}>
-                <img src={icons[index]} />
+                <img src={icons[index]} id="drawer-icons"/>
               </ListItemIcon>
             </ListItem>
           );
