@@ -1,13 +1,13 @@
 import React from "react";
 import pic7 from "../pic/pic7.jpg";
 
-const CoverPic = () => {
+const CoverPic = ({props}) => {
   return (
     <div
-      className="blur-img"
+      className={`cover-img ${props.blur? "blur-img":null}`}
       style={{ width: window.innerWidth <= 1275 ? "1275px" : "100%" }}
     >
-      <img src={pic7}/>
+      <img src={pic7} />
     </div>
   );
 };

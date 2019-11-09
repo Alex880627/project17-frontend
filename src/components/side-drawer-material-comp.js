@@ -1,7 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
@@ -40,11 +38,8 @@ export default function SideDrawer(props) {
     mail
   ];
   let navbar = "HU";
-  let email = "HU";
   props.language === "HU" ? (navbar = hu.navbar) : (navbar = en.navbar);
-  props.language === "HU"
-    ? (email = hu.footer.email)
-    : (email = en.footer.email);
+
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false

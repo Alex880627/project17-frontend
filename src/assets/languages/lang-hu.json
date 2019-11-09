@@ -17,7 +17,14 @@
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "details": "Sugár Szilvia is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#b5ffd9"
+        "color": "#b5ffd9",
+        "techniques": [
+          "Evminov gerinc-rehabilitáció",
+          "Schroth terápia",
+          "FDM (Fascia Disztorziós Modell)",
+          "Kinesio tape",
+          "Idegmobilizáció"
+        ]
       },
       {
         "name": "Csikós Panka",
@@ -25,7 +32,13 @@
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "details": "Semmelweis Egyetem Egészségtudományi Karán gyógytornász szakirány Minden korosztály: ovis tartás-, koordináció javítás, lúdtalptorna Gyermekkorban kialakult gerincferdülés (scoliosis) kezelése felnőtt gerinc problémák: kellemetlen derékfájástól - a súlyos gerincbántalmakig, sport sérülések rehabilitációja és visszatérés, funkcionális köredzés, trx, SMR henger időskori preventív torna, ízületi panaszok enyhítése, mobilitás és függetlenség megőrzése Egyéni és kis csoportos órák, mindenkire és minden apró mozdulatra fokozott figyelem egy barátságos, jó hangulatú torna közben Közösen megfogalmazott célok, közösen végrehajtva, soksok munkával és újabb és újabb sikerélményekkel.",
-        "color": "#ade2ff"
+        "color": "#ade2ff",
+        "techniques": [
+          "Svédmasszázs",
+          "Gyógy- és Sportmasszázs",
+          "FDM mozgásterápiás fájdalomcsillapító terápia",
+          "SI-terápia / AKA gerinc- és nyakkezelés (mozgásszervi problémák kezelésére)"
+        ]
       },
       {
         "name": "Erasimus Zsuzsa",
@@ -33,7 +46,13 @@
         "occupation": "Gyógymasszőr",
         "phone number": "06202441602",
         "details": "Erasimus Zsuzsa is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#e67c6c"
+        "color": "#e67c6c",
+        "techniques": [
+          "Svédmasszázs",
+          "Gyógy- és Sportmasszázs",
+          "FDM mozgásterápiás fájdalomcsillapító terápia",
+          "SI-terápia / AKA gerinc- és nyakkezelés (mozgásszervi problémák kezelésére)"
+        ]
       }
     ]
   },

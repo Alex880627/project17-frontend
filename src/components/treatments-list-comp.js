@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Scroll from "react-scroll";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";

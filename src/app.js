@@ -7,7 +7,6 @@ import TreatmentsListContainer from "./containers/treatments-list-container";
 import ContactsContainer from "./containers/contacts-container";
 import ScrollProgress from "./components/scroll-progress-bar"
 import FooterContainer from "./containers/footer-container";
-import CoverPic from "./components/cover-photo";
 import SideDrawer from "./containers/side-drawer-cont";
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
       <ScrollProgress />
       <LandinPageContainer />
       <SideDrawer />
-      <CoverPic />
       <TreatmentsListContainer />
       <TherapistListContainer />
       <PricesContainer />

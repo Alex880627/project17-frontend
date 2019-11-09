@@ -7,6 +7,7 @@ import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import HamburgerMenu from "./hamburger-icon-comp";
 import Loader from "./loader-component";
+import CoverPic from "../components/cover-photo";
 
 const NavBarComp = props => {
   let navbar = "HU";
@@ -31,37 +32,37 @@ const NavBarComp = props => {
     props.closeSideBar();
   }
   return (
-    <nav className="main-navbar">
-      <HamburgerMenu
-        closeSideBar={props.closeSideBar}
-        openSideBar={props.openSideBar}
-        sideBar={props.sideBar}
-      />
-      <div />
-      {innerWidth > 768 ? (
-        <NavigationLinksComp
-          props={props}
-          navbar={navbar}
+    <>
+      <CoverPic props={props} />
+      <nav
+        className="main-navbar"
+      >
+        <HamburgerMenu
+          closeSideBar={props.closeSideBar}
+          openSideBar={props.openSideBar}
+          sideBar={props.sideBar}
+        />
+        <div />
+        {innerWidth > 768 ? (
+          <NavigationLinksComp props={props} navbar={navbar} />
+        ) : null}
+        {isLoading === true ? <Loader /> : null}
+        <UpNavButtonContainer />
+        <EmailSending
           email={email}
           language={props.language}
+          closeModal={props.closeModal}
+          modalOpen={props.modalOpen}
         />
-      ) : null}
-      {isLoading === true ? <Loader /> : null}
-      <UpNavButtonContainer />
-      <EmailSending
-        email={email}
-        language={props.language}
-        closeModal={props.closeModal}
-        modalOpen={props.modalOpen}
-      />
-      <LanguagePickerButton
-        changeLanguageToEN={props.changeLanguageToEN}
-        changeLanguageToHU={props.changeLanguageToHU}
-        setIsloading={setIsloading}
-        isLoading={isLoading}
-        language={props.language}
-      />
-    </nav>
+        <LanguagePickerButton
+          changeLanguageToEN={props.changeLanguageToEN}
+          changeLanguageToHU={props.changeLanguageToHU}
+          setIsloading={setIsloading}
+          isLoading={isLoading}
+          language={props.language}
+        />
+      </nav>
+    </>
   );
 };
 

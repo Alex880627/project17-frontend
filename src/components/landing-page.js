@@ -2,12 +2,15 @@ import React from "react";
 import NavBarContainer from "../containers/nav-bar-container";
 import PrivacyPolicyContainer from "../containers/privacy-policy-container";
 
+
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 
-const LandinPage = (props) => {
+const LandinPage = props => {
   let landingSentence = "HU";
-  props.language === "HU" ? (landingSentence = hu.landingSentence) : (landingSentence = en.landingSentence);
+  props.language === "HU"
+    ? (landingSentence = hu.landingSentence)
+    : (landingSentence = en.landingSentence);
   return (
     <>
       <NavBarContainer />

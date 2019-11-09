@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import pricesIcon from "../pic/icons/wallet-icon.png";

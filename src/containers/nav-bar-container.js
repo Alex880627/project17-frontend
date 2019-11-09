@@ -13,6 +13,11 @@ import {
   closeModalAction
 } from "../actions/toogle-modal-action";
 
+import {
+  setBlurAction,
+  unsetBlurAction
+} from "../actions/set-blur-action";
+
 const mapDispatchToProps = dispatch => ({
   changeLanguageToHU: () => {
     dispatch(changeLangToHUAction());
@@ -31,13 +36,20 @@ const mapDispatchToProps = dispatch => ({
   },
   closeModal: () => {
     dispatch(closeModalAction());
+  },
+  setBlur: () => {
+    dispatch(setBlurAction());
+  },
+  unsetBlur: () => {
+    dispatch(unsetBlurAction());
   }
 });
 
 const mapStateToProps = state => ({
   language: state.changeLanguage.language,
   sideBar: state.toogleSideBar.sideBar,
-  modalOpen: state.toogleModal.modalOpen
+  modalOpen: state.toogleModal.modalOpen,
+  blur: state.blurReducer.blur
 });
 
 const NavBarContainer = connect(

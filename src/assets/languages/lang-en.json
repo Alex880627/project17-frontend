@@ -17,7 +17,13 @@
         "occupation": "Physiotherapist",
         "phone number": "06202441602",
         "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#b5ffd9"
+        "color": "#b5ffd9",
+        "techniques": [
+          "Svédmasszázs",
+          "Gyógy- és Sportmasszázs",
+          "FDM mozgásterápiás fájdalomcsillapító terápia",
+          "SI-terápia / AKA gerinc- és nyakkezelés (mozgásszervi problémák kezelésére)"
+        ]
       },
       {
         "name": "Csikós Panka",
@@ -25,7 +31,13 @@
         "occupation": "Physiotherapist",
         "phone number": "06202441602",
         "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#ade2ff"
+        "color": "#ade2ff",
+        "techniques": [
+          "Svédmasszázs",
+          "Gyógy- és Sportmasszázs",
+          "FDM mozgásterápiás fájdalomcsillapító terápia",
+          "SI-terápia / AKA gerinc- és nyakkezelés (mozgásszervi problémák kezelésére)"
+        ]
       },
       {
         "name": "Erasimus Zsuzsa",
@@ -33,7 +45,13 @@
         "occupation": "Massage Therapist",
         "phone number": "06202441602",
         "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "color": "#e67c6c"
+        "color": "#e67c6c",
+        "techniques": [
+          "Svédmasszázs",
+          "Gyógy- és Sportmasszázs",
+          "FDM mozgásterápiás fájdalomcsillapító terápia",
+          "SI-terápia / AKA gerinc- és nyakkezelés (mozgásszervi problémák kezelésére)"
+        ]
       }
     ]
   },

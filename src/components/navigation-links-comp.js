@@ -2,7 +2,7 @@ import React from "react";
 const Scroll = require("react-scroll");
 const scroller = Scroll.scroller;
 
-const NavigationLinksComp = ({ props, navbar, email, language }) => {
+const NavigationLinksComp = ({ props, navbar }) => {
   const link = element => {
     scroller.scrollTo(element, {
       delay: 100,
@@ -12,7 +12,15 @@ const NavigationLinksComp = ({ props, navbar, email, language }) => {
     });
   };
   return (
-    <div className="navigation">
+    <div
+      className="navigation"
+      onMouseEnter={() => {
+        props.setBlur();
+      }}
+      onMouseLeave={() => {
+        props.unsetBlur();
+      }}
+    >
       <a
         onClick={() => {
           link("colleagues");

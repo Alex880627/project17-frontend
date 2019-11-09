@@ -1,7 +1,8 @@
 
-.blur-img {
+
+.cover-img {
   top: 0;
-  z-index: 0;
+  z-index: -1;
   position: fixed;
   height: 100%;
   background-color: black;
@@ -9,22 +10,25 @@
     position: absolute;
     background-size: cover;
     margin: 0 auto;
-    opacity: 0.9;
-    filter: blur(4px);
+    opacity: 1;
+    filter: blur(0px);
     transition: all 1s;
-    &:hover {
-      filter: blur(0px);
-      opacity: 1;
-      transition: all 1s;
-    }
+  }
+}
+
+.blur-img {
+  img {
+    filter: blur(4px);
+    transform: scale(1.05);
+    transition: all 1s;
   }
 }
 
 
 @media only screen and (max-width: 768px) {
-  .blur-img {
+  .cover-img {
     top: 0;
-    z-index: 0;
+    z-index: -1;
     position: fixed;
     height: 100%;
     background-color: black;
@@ -32,7 +36,6 @@
       position: absolute;
       background-size: cover;
       margin: 0 auto;
-      opacity: 0.9;
     }
   }
 }

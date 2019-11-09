@@ -3,9 +3,6 @@ import Modal from "@material-ui/core/Modal";
 
 export default function simpleModal(ComponentParam) {
   return class extends React.Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
       return (
         <div>
