@@ -8,6 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Scroll from "react-scroll";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
 import contactsIcon from "../pic/icons/contactsIcon.png";
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function SideDrawer(props) { 
+export default function SideDrawer(props) {
   const scroller = Scroll.scroller;
   const icons = [
     treatmentsIcon,
@@ -58,10 +59,10 @@ export default function SideDrawer(props) {
     });
   };
   const toggleDrawer = (side, open) => event => {
-    setTimeout(()=> {
+    setTimeout(() => {
       props.closeSideBar();
-    },100 )
-    
+    }, 100);
+
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -90,7 +91,7 @@ export default function SideDrawer(props) {
             >
               <ListItemText primary={element[1]} />
               <ListItemIcon>
-                <img src={icons[index]} id="drawer-icons"/>
+                <img src={icons[index]} id="drawer-icons" />
               </ListItemIcon>
             </ListItem>
           ) : (
@@ -104,7 +105,7 @@ export default function SideDrawer(props) {
             >
               <ListItemText primary={element[1]} />
               <ListItemIcon style={{ pointerEvents: "none" }}>
-                <img src={icons[index]} id="drawer-icons"/>
+                <img src={icons[index]} id="drawer-icons" />
               </ListItemIcon>
             </ListItem>
           );
@@ -115,11 +116,10 @@ export default function SideDrawer(props) {
 
   return (
     <div>
-      <Button onClick={toggleDrawer("left", true)}>Open Left</Button>
-      <Drawer open={props.sideBar} onClose={toggleDrawer("left", false)}>
-        {sideList("left")}
-        <Divider />
-      </Drawer>
+      <SwipeableDrawer open={props.sideBar} onClose={toggleDrawer("left", false)}>
+          {sideList("left")}
+          <Divider />
+      </SwipeableDrawer>
     </div>
   );
 }

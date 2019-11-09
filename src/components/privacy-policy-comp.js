@@ -21,7 +21,7 @@ const PrivacyPolicyComp = props => {
     ? (policy = hu["privacy policy"])
     : (policy = en["privacy policy"]);
   return (
-      <div className="privacy-policy" style={!show? {bottom: "-20%", transition: 'bottom 0.7s'}:null}>
+      <div className="privacy-policy" style={!show? {bottom: "-60%", transition: 'bottom 1.8s'}:null}>
       <p>
         {`${policy.sentence} `}
         <a href={privacyPdf} target="blank">{`${policy.link}`}</a>
