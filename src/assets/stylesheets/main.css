@@ -217,7 +217,7 @@ body ::-webkit-scrollbar {
   border-radius: 0.313em;
   -webkit-box-shadow: 0px 0px 1.25em1px black;
           box-shadow: 0px 0px 1.25em1px black;
-  background-color: #007a72;
+  background-color: white;
   max-width: 43.75em;
   height: auto;
   color: black;
@@ -1007,10 +1007,14 @@ table {
 }
 
 th {
-  padding: 1.563em 0.313em 1.563em 0.313em;
+  padding: 10px;
   background-color: transparent;
   color: white;
   border: 1px solid white;
+}
+
+th:first-child {
+  padding: 0;
 }
 
 tr, td {
@@ -1035,6 +1039,7 @@ tr span, td > p span {
 
 tr > td:first-child {
   text-align: center;
+  padding: 0;
   color: white;
   background-color: transparent;
   border: 1px solid white;
@@ -1052,6 +1057,10 @@ tr > td:first-child {
   }
   .group-sessions-description {
     max-width: 95%;
+  }
+  tr > td:first-child {
+    text-align: center;
+    width: auto;
   }
 }
 

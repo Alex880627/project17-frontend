@@ -5,16 +5,18 @@ import TherapistListContainer from "./containers/therapist-list-container";
 import PricesContainer from "./containers/prices-container";
 import TreatmentsListContainer from "./containers/treatments-list-container";
 import ContactsContainer from "./containers/contacts-container";
+import ScrollProgress from "./components/scroll-progress-bar"
 import FooterContainer from "./containers/footer-container";
-import CoverPic from "./components/cover-photo"
-import SideDrawer from "./containers/side-drawer-cont"
+import CoverPic from "./components/cover-photo";
+import SideDrawer from "./containers/side-drawer-cont";
 
 const App = () => {
   return (
     <>
+      <ScrollProgress />
       <LandinPageContainer />
-      <SideDrawer/>
-      <CoverPic/>
+      <SideDrawer />
+      <CoverPic />
       <TreatmentsListContainer />
       <TherapistListContainer />
       <PricesContainer />

@@ -1,43 +1,45 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import Scroll from "react-scroll";
 import hu from "../assets/languages/lang-hu.json";
 import en from "../assets/languages/lang-en.json";
 import treatmentsIcon from "../pic/icons/treatments-icon.png";
 
-const TreatementDropdown = ({ element }) => {
-  const [hover, setHover] = useState(0);
-  const [open, setOpen] = useState(false);
-  const treatmentRef = useRef(null);
-  const currentElement = treatmentRef.current;
-  const changeHeight = () => {
-    if (currentElement.style.height === "3em") {
-      open ? setOpen(false) : setOpen(true);
-      currentElement.style.height = `${(currentElement.scrollHeight / 100) *
-        6}em`;
-        currentElement.style.borderBottom = '1px solid black';
-        currentElement.style.margin = '13px';
-    } else {
-      currentElement.style.height = "3em";
-      currentElement.style.margin = '0px';
-      currentElement.style.borderBottom = '0px solid black'
-      setOpen(false);
-    }
-    currentElement.parentNode.childNodes.forEach(element => {
-      element.childNodes[0].style.transform = "scaleY(1)";
-      return element !== treatmentRef.current
-        ? (element.style.height = "3em", element.style.margin = '0px', element.style.borderBottom = '0px solid black')
-        : null;
-    });
-  };
 
-  const mounted = useRef();
+
+const TreatementDropdown = ({ element }) => {
+  const [open, setOpen] = useState(false);
+  let treatmentRef = useRef(null);
   useEffect(() => {
-    if (!mounted.current) {
-      mounted.current = true;
+    if (!treatmentRef.current) {
+      treatmentRef.current = true;
     } else {
-      currentElement.style.height === "3em"? setOpen(false):setOpen(true)
+      treatmentRef.current.style.height === "3em"? setOpen(false):setOpen(true)
     }
   });
+
+  const changeHeight = () => {
+    let currentElement = treatmentRef.current;
+    if(currentElement){
+      if (currentElement.style.height === "3em") {
+        open ? setOpen(false) : setOpen(true);
+        currentElement.style.height = `${(currentElement.scrollHeight / 100) *
+          6}em`;
+          currentElement.style.borderBottom = '1px solid black';
+          currentElement.style.margin = '13px';
+      } else {
+        currentElement.style.height = "3em";
+        currentElement.style.margin = '0px';
+        currentElement.style.borderBottom = '0px solid black'
+        setOpen(false);
+      }
+      currentElement.parentNode.childNodes.forEach(element => {
+        element.childNodes[0].style.transform = "scaleY(1)";
+        return element !== treatmentRef.current
+          ? (element.style.height = "3em", element.style.margin = '0px', element.style.borderBottom = '0px solid black')
+          : null;
+      });
+    }
+  };
   return (
     <div
       className="treatment"
@@ -47,14 +49,7 @@ const TreatementDropdown = ({ element }) => {
         transition: "all 0.3s",
         cursor: "pointer"
       }}
-      // trick to not have undefined error
       ref={treatmentRef}
-      onMouseEnter={() => {
-        setHover(1);
-      }}
-      onMouseLeave={() => {
-        setHover(0);
-      }}
     >
       <div
         className="arrow-down"

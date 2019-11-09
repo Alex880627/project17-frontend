@@ -63,10 +63,14 @@ table {
 }
 
 th {
- padding: 1.563em 0.313em 1.563em 0.313em;
+ padding: 10px;
  background-color:  transparent;
  color:rgb(255, 255, 255);
  border: 1px solid rgb(255, 255, 255);
+}
+
+th:first-child {
+  padding: 0;
 }
 
 tr, td {
@@ -90,6 +94,7 @@ tr, td > p {
 
 tr > td:first-child {
   text-align: center;
+  padding: 0;
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: 1px solid rgb(255, 255, 255);
@@ -107,5 +112,9 @@ tr > td:first-child {
  }
  .group-sessions-description {
    max-width: 95%;
+ }
+ tr > td:first-child {
+  text-align: center;
+  width: auto;
  }
 }
