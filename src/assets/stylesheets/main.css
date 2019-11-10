@@ -227,7 +227,7 @@ body ::-webkit-scrollbar {
 }
 
 .therapist-details .therapist-heading {
-  background-color: #272a2f;
+  background-color: #313235;
   height: auto;
   color: white;
   width: 100%;
@@ -236,18 +236,33 @@ body ::-webkit-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.therapist-details .therapist-heading p {
+.therapist-details .therapist-heading > div p {
   margin: 15px;
   font-size: 15px;
 }
 
-.therapist-details .therapist-heading h3 {
+.therapist-details .therapist-heading > div h3 {
   margin: 15px;
+}
+
+.therapist-details .therapist-heading img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 15px;
 }
 
 .therapist-details .content-box .details {
@@ -293,6 +308,18 @@ body ::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.therapist-details .content-box .details .therapist-contacts .phone a,
+.therapist-details .content-box .details .therapist-contacts .email a {
+  text-decoration: none;
+  color: black;
+}
+
+.therapist-details .content-box .details .therapist-contacts .phone a:hover,
+.therapist-details .content-box .details .therapist-contacts .email a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .therapist-details .content-box .details .therapist-contacts .phone div,

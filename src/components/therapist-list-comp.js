@@ -118,7 +118,7 @@ const TherapistListComp = props => {
           animationBackground={animationBackground}
           closeThePopUp={closeThePopUp}
           resetTherapistByOnclick={resetTherapistByOnclick}
-          picArray={picArray}
+          picArrayHover={picArrayHover}
           openModal={props.openModal}
         />
       ) : null}
@@ -133,7 +133,7 @@ const ThreapistDetailsComp = ({
   animationBackground,
   closeThePopUp,
   resetTherapistByOnclick,
-  picArray,
+  picArrayHover,
   openModal
 }) => {
   return (
@@ -148,8 +148,11 @@ const ThreapistDetailsComp = ({
           return element.name === currentTherapist ? (
             <>
               <div className="therapist-heading">
-                <h3>{element.name}</h3>
-                <p>{`${element.occupation}`}</p>
+                <div>
+                  <h3>{element.name}</h3>
+                  <p>{`${element.occupation}`}</p>
+                </div>
+                  <img src={picArrayHover[index]} />
               </div>
               <div className="content-box">
                 <div className="details">
@@ -167,13 +170,21 @@ const ThreapistDetailsComp = ({
                       <div>
                         <img src={phone} />
                       </div>
-                      <p>{element["phone number"]}</p>
+                      <a href={`tel: +36${element["phone number"]}`}>
+                        {element["phone number"]}
+                      </a>
                     </div>
                     <div className="email">
                       <div>
                         <img src={mail} />
                       </div>
-                      <p onClick={()=>{openModal()}}>{element["email"]}</p>
+                      <p
+                        onClick={() => {
+                          openModal();
+                        }}
+                      >
+                        {element["email"]}
+                      </p>
                     </div>
                   </div>
                 </div>
