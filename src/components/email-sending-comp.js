@@ -61,10 +61,10 @@ const EmailSendingComp = ({ email, language }) => {
         <form onSubmit={onSubmit}>
           <CssTextField
             autoFocus={true}
-            id="outlined-basic"
+            id="filled-basic"
             label={email["email input"]}
             margin="dense"
-            variant="outlined"
+            variant="filled"
             name="email"
             type="email"
             required
@@ -74,10 +74,10 @@ const EmailSendingComp = ({ email, language }) => {
             }}
           />
           <CssTextField
-            id="outlined-basic"
+            id="filled-basic"
             label={email["name input"]}
             margin="dense"
-            variant="outlined"
+            variant="filled"
             name="name"
             type="name"
             required
@@ -87,10 +87,10 @@ const EmailSendingComp = ({ email, language }) => {
             }}
           />
           <CssTextField
-            id="outlined-basic"
+            id="filled-basic"
             label={email.message}
             margin="dense"
-            variant="outlined"
+            variant="filled"
             name="message"
             type="text"
             multiline

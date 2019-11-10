@@ -5,8 +5,7 @@ const scroller = Scroll.scroller;
 const NavigationLinksComp = ({ props, navbar }) => {
   const link = element => {
     scroller.scrollTo(element, {
-      delay: 100,
-      duration: 300,
+      duration: 400,
       smooth: "easeInOutExpo",
       offset: 0
     });

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Chip from "@material-ui/core/Chip";
 import therapists from "../pic/icons/therapists.png";
+import phone from "../pic/icons/phone.png";
+import mail from "../pic/icons/mail-white.png";
 import pic1 from "../pic/theraphists/pic1.jpg";
 import pic2 from "../pic/theraphists/pic2.jpg";
 import pic3 from "../pic/theraphists/pic3.jpg";
@@ -108,31 +111,79 @@ const TherapistListComp = props => {
         </div>
       </div>
       {currentTherapist !== "" ? (
-        <div
-          className="therapist-details-container"
-          id={animationBackground}
-          onMouseUp={closeThePopUp}
-        >
-          <div className="close-button" onClick={resetTherapistByOnclick} />
-          <div className="therapist-details" id={animation}>
-            {collagues.therapists.map((element, index) => {
-              return element.name === currentTherapist ? (
-                <div key={element.name}>
-                  <div>
-                    <h3>{element.name}</h3>
-                  </div>
-                  <p>
-                    <span>{`${element.occupation}`}</span>
-                    <img src={picArray[index]} alt={element.name} />
-                    {element.details}
-                  </p>
-                </div>
-              ) : null;
-            })}
-          </div>
-        </div>
+        <ThreapistDetailsComp
+          animation={animation}
+          data={collagues.therapists}
+          currentTherapist={currentTherapist}
+          animationBackground={animationBackground}
+          closeThePopUp={closeThePopUp}
+          resetTherapistByOnclick={resetTherapistByOnclick}
+          picArray={picArray}
+          openModal={props.openModal}
+        />
       ) : null}
     </>
+  );
+};
+
+const ThreapistDetailsComp = ({
+  animation,
+  data,
+  currentTherapist,
+  animationBackground,
+  closeThePopUp,
+  resetTherapistByOnclick,
+  picArray,
+  openModal
+}) => {
+  return (
+    <div
+      className="therapist-details-container"
+      id={animationBackground}
+      onMouseUp={closeThePopUp}
+    >
+      <div className="close-button" onClick={resetTherapistByOnclick} />
+      <div className="therapist-details" id={animation}>
+        {data.map((element, index) => {
+          return element.name === currentTherapist ? (
+            <>
+              <div className="therapist-heading">
+                <h3>{element.name}</h3>
+                <p>{`${element.occupation}`}</p>
+              </div>
+              <div className="content-box">
+                <div className="details">
+                  <div className="therapist-techniques">
+                    {/* <h4>{element.techniques.title}</h4> */}
+                    {element.techniques.data.map(techniq => {
+                      return (
+                        <Chip variant="outlined" size="small" label={techniq} />
+                      );
+                    })}
+                  </div>
+                  <div className="therapist-contacts">
+                    {/* <h4>{element.techniques.title}</h4> */}
+                    <div className="phone">
+                      <div>
+                        <img src={phone} />
+                      </div>
+                      <p>{element["phone number"]}</p>
+                    </div>
+                    <div className="email">
+                      <div>
+                        <img src={mail} />
+                      </div>
+                      <p onClick={()=>{openModal()}}>{element["email"]}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>{element.details}</p>
+            </>
+          ) : null;
+        })}
+      </div>
+    </div>
   );
 };
 

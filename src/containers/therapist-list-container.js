@@ -1,14 +1,20 @@
-import { connect } from 'react-redux';
-import TherapistListComp from '../components/therapist-list-comp';
+import { connect } from "react-redux";
+import TherapistListComp from "../components/therapist-list-comp";
+import { openModalAction } from "../actions/toogle-modal-action";
 
-const mapStateToProps = state => (
-  {
-    language: state.changeLanguage.language,
-  });
+const mapStateToProps = state => ({
+  language: state.changeLanguage.language
+});
+
+const mapDispatchToProps = dispatch => ({
+  openModal: () => {
+    dispatch(openModalAction());
+  }
+});
 
 const TherapistListContainer = connect(
   mapStateToProps,
-  null,
+  mapDispatchToProps
 )(TherapistListComp);
 
 export default TherapistListContainer;
