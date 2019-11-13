@@ -24,7 +24,7 @@ const TreatementDropdown = ({ element }) => {
         open ? setOpen(false) : setOpen(true);
         currentElement.style.height = `${(currentElement.scrollHeight / 100) *
           6}em`;
-          currentElement.style.borderBottom = '1px solid black';
+          currentElement.style.borderBottom = '1px solid rgb(143, 143, 143)';
           currentElement.style.margin = '13px';
       } else {
         currentElement.style.height = "3em";
@@ -52,12 +52,12 @@ const TreatementDropdown = ({ element }) => {
       ref={treatmentRef}
     >
       <div
-        className="arrow-down"
+        className="load-more"
         style={window.innerWidth > 768 ? { cursor: "pointer" } : null}
         style={
           open === true
-            ? { transform: "scaleY(-1)", transition: "transform 0.3s"}
-            : { transform: "scaleY(1)", transition: "transform 0.3s"}
+            ? { transform: "scaleY(-1)", transition: "transform 0.1s"}
+            : { transform: "scaleY(1)", transition: "transform 0.1s"}
         }
       />
       <h3>{element.title}</h3>

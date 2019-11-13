@@ -13,7 +13,6 @@
     "therapists": [
       {
         "name": "Sugár Szilvia",
-        "nick name": "Szilvi",
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "email": "studio17gyogytorna@gmail.com",
@@ -32,7 +31,6 @@
       },
       {
         "name": "Csikós Panka",
-        "nick name": "Panka",
         "occupation": "Diplomás Gyógytornász",
         "phone number": "06202441602",
         "email": "studio17gyogytorna@gmail.com",
@@ -50,7 +48,6 @@
       },
       {
         "name": "Erasimus Zsuzsa",
-        "nick name": "Zsuzsi",
         "occupation": "Gyógymasszőr",
         "phone number": "06202441602",
         "email": "studio17gyogytorna@gmail.com",
@@ -62,7 +59,7 @@
             "Svédmasszázs",
             "Gyógy- és Sportmasszázs",
             "FDM mozgásterápiás fájdalomcsillapító terápia",
-            "SI-terápia / AKA gerinc- és nyakkezelés (mozgásszervi problémák kezelésére)"
+            "SI-terápia / AKA gerinc- és nyakkezelés"
           ]
         }
       }
@@ -126,7 +123,7 @@
     "copyright": "Minden jog fenntratva!",
     "email": {
       "email header": "Írj nekünk e-mailt!",
-      "email input": "Add meg az e-mail címed",
+      "email input": "Add meg az e-mail címed vagy telefonszámod",
       "name input": "Add meg a teljes neved",
       "message": "Üzeneted...",
       "send": "Küldés"

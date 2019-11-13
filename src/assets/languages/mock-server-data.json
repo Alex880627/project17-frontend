@@ -2,51 +2,75 @@
   "sessions dates": [
     {
       "day": "monday",
+      "hour": "17:00",
+      "therapist": "Szilvi",
+      "type": "Talaj torna"
+    },
+    {
+      "day": "monday",
       "hour": "18:00",
       "therapist": "Szilvi",
-      "type": "Funkcionális Gyógytorna"
+      "type": "Evminov"
     },
     {
       "day": "tuesday",
       "hour": "7:30",
       "therapist": "Panka",
-      "type": "Funkcionális Gyógytorna"
+      "type": "Evminov"
     },
     {
       "day": "tuesday",
       "hour": "13:00",
       "therapist": "Panka",
-      "type": "Thai-chi"
+      "type": "Evminov"
     },
     {
       "day": "tuesday",
       "hour": "17:00",
       "therapist": "Panka",
-      "type": "Gerinctorna"
+      "type": "Evminov"
+    },
+    {
+      "day": "tuesday",
+      "hour": "18:00",
+      "therapist": "Szilvi",
+      "type": "Taoyin"
     },
     {
       "day": "wednesday",
       "hour": "18:00",
       "therapist": "Szilvi",
-      "type": "Gerinctorna"
-    },
-    {
-      "day": "friday",
-      "hour": "18:00",
-      "therapist": "Szilvi",
-      "type": "Karate"
+      "type": "Evminov"
     },
     {
       "day": "thursday",
       "hour": "7:30",
       "therapist": "Panka",
-      "type": "Pank-ráció"
+      "type": "Evminov"
     },
     {
       "day": "thursday",
       "hour": "17:00",
       "therapist": "Panka",
-      "type": "Pank-ráció extra"
+      "type": "Evminov"
+    },
+    {
+      "day": "thursday",
+      "hour": "18:00",
+      "therapist": "Szilvi",
+      "type": "Talaj torna"
+    },
+    {
+      "day": "friday",
+      "hour": "17:00",
+      "therapist": "Anna",
+      "type": "Pilates"
+    },
+    {
+      "day": "friday",
+      "hour": "18:00",
+      "therapist": "Szilvi",
+      "type": "Pilates"
     }
   ]
 }

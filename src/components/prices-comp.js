@@ -19,11 +19,9 @@ const PricesComp = props => {
         {prices.treatments.map(element => {
           return (
             <div className="treatments-list" key={element.name}>
-              <div className="style-wrapper">
-                <h3>{element.name}</h3>
+                <p>{element.name}</p>
                 <p>{element.price}</p>
                 <p>{`/${prices.occasion} (${element.duration})`}</p>
-              </div>
               <p>{element.description}</p>
             </div>
           );

@@ -81,7 +81,7 @@ const TherapistListComp = props => {
     <>
       <div className="therapist-wrapper" id="colleagues">
         <Link name="colleagues"></Link>
-        <div className="therapist-heading">
+        <div className="heading">
           <h3>{collagues.collagues}</h3>
           <img src={therapists} alt="therapist icon" />
         </div>
@@ -189,7 +189,7 @@ const ThreapistDetailsComp = ({
                   </div>
                 </div>
               </div>
-              <p>{element.details}</p>
+              <p className="therapist-content">{element.details}</p>
             </>
           ) : null;
         })}

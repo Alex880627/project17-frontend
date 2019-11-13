@@ -43,7 +43,6 @@ const GroupSessionsContainer = props => {
           <p>{groupSessions.description}</p>
           <h4>{groupSessions.interval}</h4>
         </div>
-
         <table>
           <tbody>
             <tr>
@@ -66,8 +65,8 @@ const GroupSessionsContainer = props => {
                           key={`${Math.random()}`}
                         >
                           {" "}
-                          <h3>{filteredTableData[0].therapist}</h3>
-                          <p><span>(</span>{filteredTableData[0].type}<span>)</span></p>
+                          <h3>{filteredTableData[0].type}</h3>
+                          <p><span>(</span>{filteredTableData[0].therapist}<span>)</span></p>
                         </td>
                       ) : (
                         <td key={`${Math.random()}`} /> // eslint-disable-line no-use-before-define
