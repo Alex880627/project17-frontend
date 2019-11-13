@@ -61,7 +61,7 @@
   "contacts": {
     "contacts title": "Where you can find us?",
     "contacts info": {
-      "name": "Stúdio 17",
+      "name": "STUDIO 17",
       "address": "Falk Miksa street 17",
       "city": "Budapest 1055",
       "ringbell": "Ring bell",
@@ -112,7 +112,9 @@
     ]
   },
   "footer": {
-    "copyright": "All rights reserved!",
+    "copyright": "All rights reserved. 2019.",
+    "privacy policy": "Privacy policy",
+    "name": "Studio 17 - Physiotherapy and massage therapy studio",
     "email": {
       "email header": "Write e-mail for us!",
       "email input": "Enter your e-mail address or phone number",

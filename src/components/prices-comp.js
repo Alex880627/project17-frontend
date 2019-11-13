@@ -20,8 +20,7 @@ const PricesComp = props => {
           return (
             <div className="treatments-list" key={element.name}>
                 <p>{element.name}</p>
-                <p>{element.price}</p>
-                <p>{`/${prices.occasion} (${element.duration})`}</p>
+                <p>{element.price}<span>{`/${prices.occasion} (${element.duration})`}</span></p>
               <p>{element.description}</p>
             </div>
           );

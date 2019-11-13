@@ -18,19 +18,31 @@ const createInfoWindow = (e, map) => {
 }
 
 const GoogleMapConfigured = () => {
+  let controlsOut ={
+    mapTypeControl:false,
+    zoomControl:false,
+    panControl:false,
+    streetViewControl:false
+  };
+
   return (
     <Map
       id="map"
       options={{
         center: { lat: 47.512209, lng: 19.048778 },
-        zoom: 18,
-        styles: styles
+        zoom: 16,
+        streetViewControl: true
       }}
+      mousemove={
+        ()=>{
+          console.log('geci');
+          
+        }
+      }
       onMapLoad={map => {
         var marker = new window.google.maps.Marker({
           position: { lat: 47.512209, lng: 19.048778 },
           map: map,
-          title: 'Hello Istanbul!'
         });
         marker.addListener('click', e => {
           createInfoWindow(e, map)
@@ -39,7 +51,7 @@ const GoogleMapConfigured = () => {
     />
   );
 }
-
+/* 
 const styles = [
   {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
   {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -119,6 +131,6 @@ const styles = [
     elementType: 'labels.text.stroke',
     stylers: [{color: '#17263c'}]
   }
-]
+] */
 
 export default GoogleMapConfigured;

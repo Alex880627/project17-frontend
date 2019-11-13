@@ -69,7 +69,7 @@
   "contacts": {
     "contacts title": "Hol találsz minket?",
     "contacts info": {
-      "name": "Stúdió 17",
+      "name": "STUDIO 17",
       "address": "Falk Miksa utca 17",
       "city": "Budapest 1055",
       "ringbell": "Kapucsengő",
@@ -120,7 +120,9 @@
     ]
   },
   "footer": {
-    "copyright": "Minden jog fenntratva!",
+    "copyright": "Minden jog fenntartva. 2019.",
+    "privacy policy": "Adatkezelései tájékoztató",
+    "name": "Studio 17 - Gyógytorna és gyógymasszázs stúdió",
     "email": {
       "email header": "Írj nekünk e-mailt!",
       "email input": "Add meg az e-mail címed vagy telefonszámod",

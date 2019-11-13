@@ -1,51 +1,58 @@
 #map {
-  position: absolute !important;
-  bottom: 1;
-  width: 100%;
-  height: 70vh;
-  margin-top: 6.25em; 
+  position: relative;
+  width: 500px;
+  height: inherit;
+  margin-left: 20px;
+  box-shadow: 0px 0px 3px 1px rgb(112, 112, 112);
 }
 
 .contacts-wrapper {
   z-index: 0;
   background-color: rgb(255, 255, 255);
   width: 100%;
-  height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .contacts-heading {
     @include headerStyle(row-reverse, $mainBlackColor, 35px, 30px);
   }  
 }
 
+.flex-wrapper {
+  display: flex;
+  margin-bottom: 100px;
+}
 
 .address-details {
-  box-shadow: 0 0 0.938em 1px rgb(54, 54, 54);
   line-height: 0px;
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
-  position: absolute;
+  background-color: white;
+  color: $mainBlackColor;
+  box-shadow: 0px 0px 3px 1px rgb(112, 112, 112);
+  width: 500px;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   z-index: 5;
-  max-width: 31.25em;
   height: auto;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
   h4{
-    color: rgb(0, 0, 0);
+    color: $mainBlackColor;
+    margin: 20px;
+    padding-top: 20px;
   }
   p {
+    margin: 20px;
     white-space: pre;
-    &:last-child {
+    font-family: Work Sans;
+    span {
       text-decoration: underline;
-    }
-    &:last-child:hover {
+      margin: 20px;
       cursor:pointer;
+    }
+    &:last-child {
+      padding-bottom: 20px;
     }
   }
 }
@@ -57,18 +64,49 @@
 
 @media only screen and (max-width: 768px) {
   .contacts-wrapper {
-    height: 150vh;
-  }
-  #map {
-    height: 150vh;
-  }
-  .contacts-wrapper {
-    z-index: 0;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100vh;
     .contacts-heading {
       @include headerStyle(column, $mainBlackColor, 55px, 20px);
     }  
+  }
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    .address-details {
+      height: 300px;
+      width: 100% !important;
+      margin: 0 auto;
+    }
+  }
+  #map {
+    position: relative;
+    width: auto;
+    height: 300px;
+    margin-left: 0px;
+    margin-top: 20px;
+    box-shadow: 0px 3px 6px 2px rgb(112, 112, 112);
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    .address-details {
+      height: 300px;
+      width: 40.625em;
+      margin: 0 auto;
+    }
+  }
+  #map {
+    position: relative;
+    width: 40.625em;
+    height: 300px;
+    margin-left: 0px;
+    margin-top: 20px;
+    box-shadow: 0px 3px 6px 2px rgb(112, 112, 112);
   }
 }

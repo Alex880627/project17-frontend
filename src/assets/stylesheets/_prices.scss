@@ -15,7 +15,7 @@
 .treatments-list-wrapper {
   padding: 1.25em;
   display: flex;
-  max-width: 40.625em;
+  max-width: 42.6872em;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
@@ -36,12 +36,12 @@
   }
   p:nth-child(2) {
     font-size: $mainHeaderSize;
+    span {
+      font-family: Work Sans;
+      font-size: 11px;
+    }
   }
   p:nth-child(3) {
-    font-family: Work Sans;
-    font-size: $smallFontSize;
-  }
-  p:nth-child(4) {
     font-family: Work Sans;
     font-size: $smallFontSize;
   }
